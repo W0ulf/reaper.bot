@@ -195,7 +195,7 @@ bot.on('message', message=>{
                 if (!args[1]) return message.reply('You did not specify a user.');
                 if (!args[2]) return message.reply('You did not give a reasoning.')
                 if (!message.guild.me.hasPermission("MANAGE_MESSAGES")) return message.reply("I don't have perms to warn this person");
-                if (!warnUser) return message.reply("Couldn't find that user!");
+                
                 var warnUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[1]));
                 var reason = args.slice(2).join("");
                 if(warnUser.hasPermission("MANAGE_MESSAGE")) return message.reply("You can\'t warn this user!");
