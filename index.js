@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const ms = require('ms');
-const db = require("quick.db");
+const fs = require("fs");
 
 
 const PREFIX = '-';
@@ -23,36 +23,6 @@ bot.on('message', message=>{
 
     switch(args[0]){
         case 'warn':
-            if(!message.member.hasPermission("ADMINISTRATOR")) {
-                return message.channel.send("You don\'t have permissions to use this comand!")
-            }
-            const user = message.mentions.members.first()
-
-            if(!user) {
-                return message.channel.send("You did not mention a user.")
-            }
-            if(message.mentions.users.first().bot) {
-                return message.channel.send("You can\'t warn bots!")
-            }
-            const reason = args.slice(1).join(" ")
-
-            if(!reason) {
-                return message.channel.send("You did not give a reasoning!")
-            }
-            let warnings = db.get('warnings_${message.guild.id}_${user.id}')
-
-            if(warnings === 3) {
-                return message.channel.send('${message.mentions.user.first().username} reached 3 warns')
-            }
-            if(warnings === null) {
-                db.set('warnings_${message.guild.id}_${user.id}', 1)
-                user.send('You have been warned in **${message.guild.name}** for ${reason}')
-                await message.channel.send('You warned **${message.mentions.users.first().username}** for ${reason}')
-            }else if(warnings !== null) {
-                db.add('warnings_${message.guild.id}_${user.id}', 1)
-                user.send('You have been warned in **${message.guild.name}** for ${reason}')
-                await message.channel.send('You warned **${message.mentions.users.first().username}** for ${reason}')
-            }
         break;
         case 'warnrules':
 
