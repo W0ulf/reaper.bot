@@ -191,7 +191,6 @@ bot.on('message', message=>{
              message.channel.send(Embed);
         break;
         case 'warn':
-            if(message.member.permissions.has('MANAGE_MESSAGE')){
                 if (!args[1]) return message.reply('You did not specify a user.');
                 if (!args[2]) return message.reply('You did not give a reasoning.')
                 if (!message.guild.me.hasPermission("MANAGE_MESSAGES")) return message.reply("I don't have perms to warn this person");
@@ -215,9 +214,7 @@ bot.on('message', message=>{
                 var channel = message.member.guild.channels.chache.get("742420391057948783");
                 if(!channel) return;
                 channel.send(embed);
-            }else {
-                message.channel.send("You don\'t have permissions to use this command!")
-            }
+
         break;
         case 'mute':
             if(message.member.permissions.has('MANAGE_MESSAGE')){
