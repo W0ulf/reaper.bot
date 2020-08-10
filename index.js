@@ -132,6 +132,7 @@ bot.on('message', message=>{
                 { name: "-Updated -warnrules command", value: '\u200B' },
                 { name: "-Connected the bot with mulitple devices.", value: '\u200B' },
                 { name: "-Connected the bot with a server to let it be online 24/7.", value: '\u200B' },
+                { name: "-Fixed -ban command kicking people instead of banning.", value: '\u200B' },
             )
             .setColor(0x17CFEC)
              message.channel.send(Embed);
