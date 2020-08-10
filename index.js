@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 const ms = require('ms');
 const fs = require("fs");
-const warns = JSON.parse(fr.readFileSync("./warnings.json", "utf8"));
+const warns = JSON.parse(fs.readFileSync("./warnings.json", "utf8"));
 
 const PREFIX = '-';
 
