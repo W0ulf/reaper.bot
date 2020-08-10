@@ -9,7 +9,7 @@ var version = '1.0.4'
 const usedCommandRecently = new Set();
 
 bot.on('ready', () =>{
-    console.log('The bot is online!');
+    console.log('The bot is updated!');
     bot.user.setActivity('Reaper.bot | -help');
 });
 
