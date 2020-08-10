@@ -131,7 +131,7 @@ bot.on('message', message=>{
                 { name: "-Updated -help command", value: '\u200B' },
                 { name: "-Updated -warnrules command", value: '\u200B' },
                 { name: "-Connected the bot with mulitple devices.", value: '\u200B' },
-                { name: "-Working on setting up the bot 24/7.", value: '\u200B' },
+                { name: "-Connected the bot with a server to let it be online 24/7.", value: '\u200B' },
             )
             .setColor(0x17CFEC)
              message.channel.send(Embed);
