@@ -53,7 +53,6 @@ bot.on('message', message=>{
                 user.send('You have been warned in **${message.guild.name}** for ${reason}')
                 await message.channel.send('You warned **${message.mentions.users.first().username}** for ${reason}')
             }
-            
         break;
         case 'warnrules':
 
