@@ -198,8 +198,8 @@ bot.on('message', message=>{
                 
                 var warnUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[1]));
                 var reason = args.slice(2).join("");
-                if(warnUser.hasPermission("MANAGE_MESSAGE")) return message.reply("You can\'t warn this user!");
-                if(!warns[warnUser.id]) warns[warnUser.id] ={
+                if (warnUser.hasPermission("MANAGE_MESSAGE")) return message.reply("You can\'t warn this user!");
+                if (!warns[warnUser.id]) warns[warnUser.id] ={
                     warns: 0
                 };
                 warns[warnUser.id].warns++;
