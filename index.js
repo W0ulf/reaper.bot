@@ -188,6 +188,21 @@ bot.on('message', message=>{
              .setColor(0x6FC618)
              message.channel.send(Embed);
         break;
+        case 'warn':
+            if(message.member.permissions.has('MANAGE_MESSAGE')){
+                if (!args[1]) return message.reply('You did not specify a user.');
+                if (!args[2]) return message.reply('You did not give a reasoning.')
+                if (!message.guild.me.hasPermission("MANAGE_MESSAGES")) return message.reply("I don't have perms to warn this person");
+                if (!warnUser) return message.reply("Couldn't find that user.");
+                var warnUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[1]));
+                var reason = args.slice(2).join("");
+                if(warnUser.hasPermission("MANAGE_MESSAGE")) return message.reply("You can\'t warn this user!");
+                
+            }else {
+                message.channel.send("You don\'t have permissions to use this command!")
+
+            }
+        break;
         case 'mute':
             if(message.member.permissions.has('MANAGE_MESSAGE')){
                 var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[1]));
