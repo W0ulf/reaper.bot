@@ -265,7 +265,7 @@ bot.on('message', message=>{
                         const member = message.guild.member(user);
     
                         if(member){
-                            member.kick({ression: 'You were banned from the black hand!'}).then(() =>{
+                            member.ban({ression: 'You were banned from the black hand!'}).then(() =>{
                                 message.reply(`Sucessfully banned ${user.tag} from the server!`)
                             }).catch(err =>{
                                 message.reply(`I was unable to ban this member`);
