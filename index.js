@@ -23,7 +23,7 @@ bot.on('message', message=>{
 
     switch(args[0]){
         case 'warn':
-            module.exports.run = async (client,message, args) => {
+           
             if (!message.member.hasPermission("BAN_MEMBER")) return message.reply("You don\'t have permissions to use this command!");
             if (!args[1]) return message.reply('You did not specify a user.');
             if (!args[2]) return message.reply('You did not give a reasoning.')
@@ -48,7 +48,7 @@ bot.on('message', message=>{
             var channel = message.member.guild.channels.chache.get("742420391057948783");
             if(!channel) return;
             channel.send(embed);
-            }
+            
     break;
         case 'warnrules':
 
