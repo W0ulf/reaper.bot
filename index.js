@@ -6,9 +6,6 @@ const bot = new Discord.Client();
 
 var version = '1.0.4'
 
-
-if(commands) commands.run(bot,message, args);
-
 const usedCommandRecently = new Set();
 
 bot.on('ready', () =>{
