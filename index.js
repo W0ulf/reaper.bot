@@ -30,7 +30,7 @@ bot.on('message', message=>{
 
     switch(args[0]){
         case 'warn':
-            client.commands.get('warn').execute(message, args);
+            bot.commands.get('warn').execute(message, args);
         break;
         case 'warnrules':
             if(message.member.permissions.has('ADMINISTRATOR')){
