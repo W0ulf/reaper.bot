@@ -1,7 +1,15 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const ms = require('ms');
-const fs = require("fs");
+const fs = require('fs');
+
+clients.commands = new Discord.Collection();
+const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
+for(const file of commandFiles){
+    const command = require(`./commands/${file}`);
+
+    client.commands.set(command.name, commad);
+}
 
 
 const PREFIX = '-';
@@ -16,16 +24,15 @@ bot.on('ready', () =>{
 });
 
 
-
 bot.on('message', message=>{
     
     let args = message.content.substring(PREFIX.length).split(" ");
 
     switch(args[0]){
         case 'warn':
+            client.commands.get('warn').execute(message, args);
         break;
         case 'warnrules':
-
             if(message.member.permissions.has('ADMINISTRATOR')){
                 const Embed = new Discord.MessageEmbed()
             .setTitle("These will result in a warning/verbal")
