@@ -1,21 +1,28 @@
 const Discord = require('discord.js');
-const bot = new Discord.Client();
 const ms = require('ms');
-const fs = require('fs');
-
-
-bot.commands = new Discord.Collection();
-const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
-for(const file of commandFiles){
-    const command = require(`./commands/${file}`);
-
-    bot.commands.set(command.name, command);
-}
-
-
+const fs = require("fs");
 const PREFIX = '-';
+const bot = new Discord.Client();
+bot.commands = new Discord.Collection();
+
+fs.readdir("./commands/", (err, files) => {
+    if(err) console.log(err);
+    var jsFiles = files.filter(f => f.split(".").pop() === "js");
+    if(jsFiles.length <= 0) {
+        console.log("no files found");
+        return;
+    }
+    jsfile.forEach((f, i) => {
+        var fileGet = require('./commands/${f}');
+        console.lof('${f} loaded.');
+        bot.commands.set(fileGet.help.name, fileGet);
+    })
+});
 
 var version = '1.0.4'
+var commands = bot.commands.get(command.slice(prefix.length));
+
+if(commands) commands.run(bot,message, args);
 
 const usedCommandRecently = new Set();
 
@@ -26,7 +33,6 @@ bot.on('ready', () =>{
 
 
 bot.on('message', message=>{
-    
     let args = message.content.substring(PREFIX.length).split(" ");
 
     switch(args[0]){
