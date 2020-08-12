@@ -20,7 +20,7 @@ fs.readdir("./commands/", (err, files) => {
 });
 
 var version = '1.0.4'
-var commands = bot.commands.slice(PREFIX.length);
+var commands = bot.commands.get(commands.slice(PREFIX.length));
 
 if(commands) commands.run(bot,message, args);
 
