@@ -3,7 +3,6 @@ const ms = require('ms');
 const PREFIX = '-';
 const bot = new Discord.Client();
 const fs = require("fs");
-const db = require('quick.db')
 
 bot.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
