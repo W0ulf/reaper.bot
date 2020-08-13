@@ -26,7 +26,7 @@ module.exports = {
             .setTitle('**Warned** ${warnUser} (${warnUser.id})')
             .setDescription('**Reason:** ${reason}')
             .addField("Amount of warns", warns[warnUser.id].warns);
-        var channel = message.member.guild.channels.chache.get("742420391057948783");
+        var channel = message.member.guild.channels.chache.get("740647204456497193");
         if(!channel) return;
         channel.send(embed);
     }
