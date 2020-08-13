@@ -5,7 +5,7 @@ module.exports = {
     name: 'warn',
     description: "warn a user with this command!",
     execute(message, args){
-        if (!message.member.hasPermission("BAN_MEMBER")) return message.reply("You don\'t have permissions to use this command!");
+        if (!message.member.hasPermission("BAN_MEMBERS")) return message.reply("You don\'t have permissions to use this command!");
         if (!args[1]) return message.reply('You did not specify a user.');
         if (!args[2]) return message.reply('You did not give a reasoning.')
         if (!message.guild.me.hasPermission("MANAGE_MESSAGES")) return message.reply("I don't have perms to warn this person");
