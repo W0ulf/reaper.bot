@@ -9,7 +9,7 @@ const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith(
 for(const file of commandFiles){
     const command = require(`./commands/${file}`);
 
-    client.commands.set(command.name, command);
+    bot.commands.set(command.name, command);
 }
 
 var version = '1.0.4'
