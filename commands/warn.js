@@ -1,6 +1,6 @@
 module.exports = {
     name: 'warn',
-    run: async (client, message, args) => {
+    execute(message, args){
     
         if(!message.member.hasPermission("ADMINISTRATOR")) {
             return message.channel.send("You don't have permissions to use this command!")
