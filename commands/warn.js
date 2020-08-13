@@ -1,9 +1,9 @@
 module.exports = {
     name: 'warn',
+    run: async (client, message, args) => {
     
-    execute(message, args){
         if(!message.member.hasPermission("ADMINISTRATOR")) {
-            return message.channel.send("You dpn't have permissions to use this command!")
+            return message.channel.send("You don't have permissions to use this command!")
           }
           
           const user = message.mentions.members.first()
