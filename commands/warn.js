@@ -1,7 +1,10 @@
+const discord = require("discord.js");
+const fs = require("fs");
+const warns = JSON.parse(fs.readFileSync("./warnings.json", "utf8"));
+
 module.exports = {
     name: 'warn',
     async execute(message, args){
-    
       if (!message.member.hasPermission("BAN_MEMBER")) return message.reply("You don\'t have permissions to use this command!");
       if (!args[1]) return message.reply('You did not specify a user.');
       if (!args[2]) return message.reply('You did not give a reasoning.')
