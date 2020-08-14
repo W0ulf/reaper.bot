@@ -2,43 +2,30 @@ module.exports = {
     name: 'warn',
     async execute(message, args){
     
-        if(!message.member.hasPermission("ADMINISTRATOR")) {
-            return message.channel.send("You don't have permissions to use this command!")
-          }
-          
-          const user = message.mentions.members.first()
-          
-           if(!user) {
-            return message.channel.send("Please Mention the person to who you want to warn - warn @mention <reason>")
-          }
-          if(message.mentions.users.first().bot) {
-            return message.channel.send("You can not warn bots")
-          }
-          if(message.author.id === user.id) {
-            return message.channel.send("You can not warn yourself")
-          }
-          if(message.author.id === message.guild.owner.id) {
-            return message.channel.send("You jerk, how you can warn server owner -_-")
-          }
-          const reason = args.slice(1).join(" ")
-
-          if(!reason) {
-          return message.channel.send("Please provide reason to warn - warn @mention <reason>")
-          }
-          let warnings = db.get(`warnings_${message.guild.id}_${user.id}`)
-          if(warnings === 3) {
-            return message.channel.send(`${message.mentions.users.first().username} already reached his/her limit with 3 warnings`)
-          }
-          if(warnings === null) {
-            db.set(`warnings_${message.guild.id}_${user.id}`, 1)
-            user.send(`You have been warned in **${message.guild.name}** for ${reason}`)
-            await message.channel.send(`You warned **${message.mentions.users.first().username}** for ${reason}`)//DO NOT FORGET TO USE ASYNC FUNCTION
-          }
-          else if(warnings !== null) {
-            db.add(`warnings_${message.guild.id}_${user.id}`, 1)
-           user.send(`You have been warned in **${message.guild.name}** for ${reason}`)
-          await message.channel.send(`You warned **${message.mentions.users.first().username}** for ${reason}`) //DO NOT FORGET TO USE ASYNC FUNCTION
-        }
+      if (!message.member.hasPermission("BAN_MEMBER")) return message.reply("You don\'t have permissions to use this command!");
+      if (!args[1]) return message.reply('You did not specify a user.');
+      if (!args[2]) return message.reply('You did not give a reasoning.')
+      if (!message.guild.me.hasPermission("MANAGE_MESSAGES")) return message.reply("I don't have perms to warn this person");
+      if (!warnUser) return message.reply("Couldn't find that user!");
+      var warnUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[1]));
+      var reason = args.slice(2).join("");
+      if (warnUser.hasPermission("MANAGE_MESSAGE")) return message.reply("You can\'t warn this user!");
+      if (!warns[warnUser.id]) warns[warnUser.id] ={
+          warns: 0
+      };
+      warns[warnUser.id].warns++;
+      fs.writeFile("./warnings.json", JSON.stringify(warns), (err) =>{
+          if (err) console.log(err);
+      });
+      var embed = new Discord.MessageEmbed()
+          .setColor("0x17CFEC")
+          .setFooter(message.member.displayName, message.author.displayAvatarURL)
+          .setTitle('**Warned** ${warnUser} (${warnUser.id})')
+          .setDescription('**Reason:** ${reason}')
+          .addField("Amount of warns", warns[warnUser.id].warns);
+      var channel = message.member.guild.channels.chache.get("742420391057948783");
+      if(!channel) return;
+      channel.send(embed);
           
     }
 }
