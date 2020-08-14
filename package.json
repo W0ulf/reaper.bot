@@ -1,7 +1,7 @@
 {
   "name": "dbot",
   "version": "1.0.4",
-  "description": "a discord administrator bot.",
+  "description": "a discord moderation bot.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
