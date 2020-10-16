@@ -26,9 +26,6 @@ bot.on('message', message=>{
     let args = message.content.substring(PREFIX.length).split(" ");
 
     switch(args[0]){
-        case 'warn':
-            bot.commands.get('warn').execute(message, args);
-        break;
         case 'warnrules':
             if(message.member.permissions.has('ADMINISTRATOR')){
                 const Embed = new Discord.MessageEmbed()
