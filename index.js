@@ -68,7 +68,7 @@ bot.on('message', message=>{
         case 'ranks':
             if(message.member.permissions.has('ADMINISTRATOR')){
                 const Embed = new Discord.MessageEmbed()
-            .setTitle("The Black Hand rank list")
+            .setTitle("The Black Hand rank list test")
             .addField("Pitdog", "You are automatically given this role.")
             .addField("Bandit", "This is for you noobs to feel special, you must be prestige 1 in assassin to acquire.")
             .addField("Murderer", "You must be prestige 10 for this role.")
