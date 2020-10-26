@@ -67,7 +67,7 @@ bot.on('message', message=>{
         break;
         case 'ranks':
             if(message.member.permissions.has('ADMINISTRATOR')){
-                 message.channel.bulkDelete(args[1]);
+                 message.channel.bulkDelete(1);
                 const Embed = new Discord.MessageEmbed()
             .setTitle("The Black Hand rank list!")
             .addField("Pitdog", "You are automatically given this role.")
