@@ -20,6 +20,7 @@ bot.on('message', message=>{
     switch(args[0]){
         case 'warnrules':
             if(message.member.permissions.has('ADMINISTRATOR')){
+                message.channel.bulkDelete(1);
                 const Embed = new Discord.MessageEmbed()
             .setTitle("These will result in a warning/verbal")
             .addFields(
@@ -49,6 +50,7 @@ bot.on('message', message=>{
         break;
         case 'banrules':
             if(message.member.permissions.has('ADMINISTRATOR')){
+                message.channel.bulkDelete(1);
                 const Embed = new Discord.MessageEmbed()
             .setTitle("These will result in bans")
             .addFields(
@@ -103,6 +105,7 @@ bot.on('message', message=>{
         break;
         case 'staffrules':
             if(message.member.permissions.has('ADMINISTRATOR')){
+                message.channel.bulkDelete(1);
                 const Embed = new Discord.MessageEmbed()
             .setTitle("These are rules for the admins punishable by demote/kick")
             .addFields(
@@ -225,6 +228,7 @@ bot.on('message', message=>{
         case 'clear':
             if(message.member.permissions.has('MANAGE_MESSAGE')){
           if(!args[1]) return message.reply('Error, you did not put in an amount.')
+          message.channel.bulkDelete(1);
           message.channel.bulkDelete(args[1]);
             }else {
                 message.channel.send("You don\'t have permissions to use this command!")
