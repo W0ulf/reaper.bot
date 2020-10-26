@@ -132,7 +132,7 @@ bot.on('message', message=>{
                 { name: "-Updated -warnrules command", value: '\u200B' },
                 { name: "-Connected to one devices again.", value: '\u200B' },
                 { name: "-Reconnected the bot with a server to let it be online 24/7.", value: '\u200B' },
-                { name: "-Working on fixing the -clear command.", value: '\u200B' },
+                { name: "-Fixing the -clear command.", value: '\u200B' },
                 { name: "-Fixed the bot sending every message twice.", value: '\u200B' },
             )
             .setColor(0x17CFEC)
