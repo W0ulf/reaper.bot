@@ -29,6 +29,7 @@ bot.on('message', message=>{
                 { name: "-No disrespecting admins, they’re doing their job and they make this server better.", value: '\u200B' },
                 { name: "-You can say the n word, just no hard r.", value: '\u200B' },
                 { name: "-No XP farming.", value: '\u200B' },
+                { name: "-Any discriminations towards color or sexual preference will be punished!", value: '\u200B' },
                 { name: "-Inappropriate profile pictures.", value: '\u200B' },
                 { name: "-Ghost tagging people is not allowed.", value: '\u200B' },
                 { name: "-Ear-rape in voice calls is not allowed, and you will be server muted.", value: '\u200B' },
@@ -70,11 +71,11 @@ bot.on('message', message=>{
                 const Embed = new Discord.MessageEmbed()
             .setTitle("The Black Hand rank list!")
             .addField("Pitdog", "You are automatically given this role.")
-            .addField("Bandit", "This is for you noobs to feel special, you must be prestige 1 in assassin to acquire.")
-            .addField("Murderer", "You must be prestige 10 for this role.")
-            .addField("Slayer", "Once you are prestige 20 you get this which is usually your first big milestone good job!")
-            .addField("Eliminator", "This is the first big jump as u have to go from prestige 20 all the way up to 40 to get this role.")
-            .addField("Assassin", "By this point your probably excited to get prestige 100 as u need to be prestige 60 for this role.")
+            .addField("Luxury", "This role is for people who managed to buy all the black hand merch.")
+            .addField("Noobie (10)", "This role is obtained by reaching lvl 10 with mee6")
+            .addField("cool person (20)", "This role is obtained by reaching lvl 20 with mee6 this comes with image perms and nickname perms.")
+            .addField("Epic (40)", "This role is obtained by reaching lvl 40 with mee6 this comes with acces to the colored roles.")
+            .addField("Legendary (60)", "This role is obtained by reaching lvl 60 with mee6 this comes with acces to the colored roles.")
             .addField("Executioner", "You need prestige 100 for this role good job you pro.")
             .addField("Skull Crushers", "You must have prestige 200 for this role. 0.0")
             .addField("Overlord", "Prestige 300 is needed for this role.")
@@ -90,7 +91,7 @@ bot.on('message', message=>{
             .addField("Nitro Booster", "This role is automatically given to the people that boost the server.")
             .addField("Staff", "This role is for to the people with the Trial Mod, Silencer, The Hand and Speaker role.")
             .addField("Trial Mod", "You get this role if your application was accepted or if you seem like a good moderator, if you do good you get promoted to Silencer and if you do bad you get demoted.")
-            .addField("Silencer", "These are the normal Admins good job if you have this role or obtain it.")
+            .addField("Silencer", "This is a role for the honored people in the black hand.")
             .addField("The Hand", "These are the highest admins there will only ever be 5 at a time hehe its like 5 fingers on a hand woah.")
             .addField("Speaker", "This role is for the co-owner.")
             .addField("Listener", "This role is for the owner.")
@@ -112,6 +113,7 @@ bot.on('message', message=>{
                 { name: "-They can't talk in #staff-announcements, they still can read unless they're The Hand.", value: '\u200B' },
                 { name: "-They can't delete/create channels (without permission).", value: '\u200B' },
                 { name: "-They can’t tag everyone (without permission).", value: '\u200B' },
+                { name: "-They have to send atleast 100 messages per week.", value: '\u200B' },
                 )
              .setColor(0x17CFEC)
              message.channel.send(Embed);
@@ -144,7 +146,7 @@ bot.on('message', message=>{
             if (usedCommandRecently.has(message.author.id)) {
                 message.reply("You cannot use that command just yet! Wait another 20 secs!");
             } else {
-                message.channel.send('**Permanent Discord Invite:** https://discord.gg/uFbsPud')
+                message.channel.send('**Permanent Discord Invite:** https://discord.gg/sWXTF4R')
                 usedCommandRecently.add(message.author.id);
                     setTimeout(() => {
                     usedCommandRecently.delete(message.author.id)
