@@ -4,7 +4,7 @@ const PREFIX = '-';
 const bot = new Discord.Client();
 const fs = require("fs");
 
-var version = '1.0.4'
+var version = '1.0.5'
 
 const usedCommandRecently = new Set();
 
@@ -27,7 +27,6 @@ bot.on('message', message=>{
                 { name: "-No Advertising, this includes advertising in DMs.", value: '\u200B' },
                 { name: "-Your nicknames must be both mention able and appropriate.", value: '\u200B' },
                 { name: "-No disrespecting admins, they’re doing their job and they make this server better.", value: '\u200B' },
-                { name: "-You can say the n word, just no hard r.", value: '\u200B' },
                 { name: "-No XP farming.", value: '\u200B' },
                 { name: "-Any discriminations towards color or sexual preference will be punished!", value: '\u200B' },
                 { name: "-Inappropriate profile pictures.", value: '\u200B' },
@@ -127,13 +126,13 @@ bot.on('message', message=>{
                 const Embed = new Discord.MessageEmbed()
             .setTitle("Changelog version " + version)
             .addFields(
-                { name: "-Working on a -warn command will be released this version.", value: '\u200B' },
-                { name: "-Added a -ranks command", value: '\u200B' },
-                { name: "-Updated -help command", value: '\u200B' },
+                { name: "-Canceled warn command maybe rework on it in the future.", value: '\u200B' },
+                { name: "-Updated -ranks command", value: '\u200B' },
+                { name: "-Updated -staffrules command", value: '\u200B' },
                 { name: "-Updated -warnrules command", value: '\u200B' },
-                { name: "-Connected the bot with mulitple devices.", value: '\u200B' },
-                { name: "-Connected the bot with a server to let it be online 24/7.", value: '\u200B' },
-                { name: "-Fixed -ban command kicking people instead of banning.", value: '\u200B' },
+                { name: "-Connected to one devices again.", value: '\u200B' },
+                { name: "-Reconnected the bot with a server to let it be online 24/7.", value: '\u200B' },
+                { name: "-Working on fixing the current glitches.", value: '\u200B' },
             )
             .setColor(0x17CFEC)
              message.channel.send(Embed);
