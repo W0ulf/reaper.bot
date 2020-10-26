@@ -71,7 +71,7 @@ bot.on('message', message=>{
             .setTitle("The Black Hand rank list!")
             .addField("Pitdog", "You are automatically given this role.")
             .addField("Luxury", "This role is for people who managed to buy all the black hand merch.")
-            .addField("Noobie (10)", "This role is obtained by reaching lvl 10 with mee6")
+            .addField("Noobie (10)", "This role is obtained by reaching lvl 10 with mee6.")
             .addField("cool person (20)", "This role is obtained by reaching lvl 20 with mee6 this comes with image perms and nickname perms.")
             .addField("Epic (40)", "This role is obtained by reaching lvl 40 with mee6 this comes with acces to the colored roles.")
             .addField("Legendary (60)", "This role is obtained by reaching lvl 60 with mee6 this comes with acces to the colored roles.")
@@ -132,7 +132,8 @@ bot.on('message', message=>{
                 { name: "-Updated -warnrules command", value: '\u200B' },
                 { name: "-Connected to one devices again.", value: '\u200B' },
                 { name: "-Reconnected the bot with a server to let it be online 24/7.", value: '\u200B' },
-                { name: "-Working on fixing the current glitches.", value: '\u200B' },
+                { name: "-Working on fixing the -clear command.", value: '\u200B' },
+                { name: "-Fixed the bot sending every message twice.", value: '\u200B' },
             )
             .setColor(0x17CFEC)
              message.channel.send(Embed);
