@@ -29,8 +29,8 @@ bot.on('message', message=>{
                 message.channel.send(Embed);
                 break;
             }
-            let msgargs = args.slice(1).join(" ");
-            message.channel.send(Args[1]).then(messageReaction => {
+            let msgArgs = args.slice(1).join(" ");
+            message.channel.send(msgArgs).then(messageReaction => {
                 messageReaction.react("👍");
                 messageReaction.react("👎");
             });
