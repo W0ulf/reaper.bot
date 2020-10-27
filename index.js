@@ -30,7 +30,7 @@ bot.on('message', message=>{
                 break;
             }
             let msgargs = args.slice(1).join(" ");
-            message.channel.send(Args).then(messageReaction => {
+            message.channel.send(msgArgs).then(messageReaction => {
                 messageReaction.react("👍");
                 messageReaction.react("👎");
             });
@@ -245,9 +245,9 @@ bot.on('message', message=>{
         break;
         case 'clear':
             if(message.member.permissions.has('MANAGE_MESSAGE')){
+                message.channel.bulkDelete(1);
           if(!args[1]) return message.reply('Error, you did not put in an amount.')
           message.channel.bulkDelete(args[1]);
-          message.channel.bulkDelete(1);
             }else {
                 message.channel.send("You don\'t have permissions to use this command!")
             }
