@@ -30,7 +30,7 @@ bot.on('message', message=>{
                 break;
             }
             let msgargs = args.slice(1).join(" ");
-            message.channel.send(messageArgs).then(messageReaction => {
+            message.channel.send(Args).then(messageReaction => {
                 messageReaction.react("👍");
                 messageReaction.react("👎");
             });
