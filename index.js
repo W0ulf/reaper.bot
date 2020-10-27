@@ -31,7 +31,7 @@ bot.on('message', message=>{
             }
             message.channel.bulkDelete(1);
             let msgArgs = args.slice(1).join(" ");
-            message.channel.send("📑" + "**" + msgArgs + "**").then(messageReaction => {
+            message.channel.send("**" + msgArgs + "**").then(messageReaction => {
                 messageReaction.react("👍");
                 messageReaction.react("👎");
             });
