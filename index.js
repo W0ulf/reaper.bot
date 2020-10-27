@@ -25,7 +25,7 @@ bot.on('message', message=>{
                 .setColor(0xFFC300)
                 .setDescription("-poll to initiate a yes or no poll")
 
-            if(!arge[1]){
+            if(!args[1]){
                 message.channel.send(Embed);
             }}
         break;
