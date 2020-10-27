@@ -18,6 +18,16 @@ bot.on('message', message=>{
     let args = message.content.substring(PREFIX.length).split(" ");
 
     switch(args[0]){
+        case 'poll':
+            const Embed = new Discord.MessageEmbed()
+            .setColor(0xFFC300)
+            .setTitle("Inititate Poll")
+            .setDescription("-poll to initiate a yes or no poll")
+
+            if(!arge[1]){
+                message.channel.send(Embed);
+            }
+        break;
         case 'warnrules':
             if(message.member.permissions.has('ADMINISTRATOR')){
                 message.channel.bulkDelete(1);
