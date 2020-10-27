@@ -19,14 +19,15 @@ bot.on('message', message=>{
 
     switch(args[0]){
         case 'poll':
-            const Embed = new Discord.MessageEmbed()
-            .setTitle("Inititate Poll")
-            .setColor(0xFFC300)
-            .setDescription("-poll to initiate a yes or no poll")
+            if(message.member.permissions.has('ADMINISTRATOR')){
+                const Embed = new Discord.MessageEmbed()
+                .setTitle("Inititate Poll")
+                .setColor(0xFFC300)
+                .setDescription("-poll to initiate a yes or no poll")
 
             if(!arge[1]){
                 message.channel.send(Embed);
-            }
+            }}
         break;
         case 'warnrules':
             if(message.member.permissions.has('ADMINISTRATOR')){
