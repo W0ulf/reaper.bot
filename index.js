@@ -27,7 +27,14 @@ bot.on('message', message=>{
 
             if(!args[1]){
                 message.channel.send(Embed);
-            }}
+                break;
+            }
+            let msgargs = args.slice(1).join(" ");
+            message.channel.send(msgArgs).then(messageReaction => {
+                messageReaction.react("👍");
+                messageReaction.react("👎");
+            });
+        }
         break;
         case 'warnrules':
             if(message.member.permissions.has('ADMINISTRATOR')){
