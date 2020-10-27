@@ -155,8 +155,9 @@ bot.on('message', message=>{
                 { name: "-Updated -warnrules command", value: '\u200B' },
                 { name: "-Connected to one devices again.", value: '\u200B' },
                 { name: "-Reconnected the bot with a server to let it be online 24/7.", value: '\u200B' },
-                { name: "-Optimazed and fixed -clear command.", value: '\u200B' },
+                { name: "-Optimazing the -clear command.", value: '\u200B' },
                 { name: "-Fixed the bot sending every message twice.", value: '\u200B' },
+                { name: "-Updated -help.", value: '\u200B' },
             )
             .setColor(0x17CFEC)
              message.channel.send(Embed);
@@ -209,6 +210,7 @@ bot.on('message', message=>{
             .addField("-banrules", "Sends the ban rules embed.")
             .addField("-changelog", "Shows what's changed in the last version from the bot.")
             .addField("-ranks", "Shows The Black Hand ranks embed.")
+            .addField("-poll", "Makes from your question a poll.")
              .setColor(0x6FC618)
              message.channel.send(Embed);
         break;
