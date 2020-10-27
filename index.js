@@ -29,6 +29,7 @@ bot.on('message', message=>{
                 message.channel.send(Embed);
                 break;
             }
+            message.channel.bulkDelete(1);
             let msgArgs = args.slice(1).join(" ");
             message.channel.send(msgArgs).then(messageReaction => {
                 messageReaction.react("👍");
