@@ -92,11 +92,11 @@ bot.on('message', message=>{
                 const Embed = new Discord.MessageEmbed()
             .setTitle("The Black Hand rank list!")
             .addField("Pitdog", "You are automatically given this role.")
-            .addField("Luxury", "This role is for people who managed to buy all the black hand merch.")
+            .addField("Luxury", "This role is for people who managed to buy all the black hand merch. This also comes with the same perms as the Legendary role.")
             .addField("Noobie (10)", "This role is obtained by reaching lvl 10 with mee6.")
             .addField("cool person (20)", "This role is obtained by reaching lvl 20 with mee6 this comes with image perms and nickname perms.")
-            .addField("Epic (40)", "This role is obtained by reaching lvl 40 with mee6 this comes with acces to the colored roles.")
-            .addField("Legendary (60)", "This role is obtained by reaching lvl 60 with mee6 this comes with acces to the colored roles.")
+            .addField("Epic (40)", "This role is obtained by reaching lvl 40 with mee6 this comes with access to the colored roles.")
+            .addField("Legendary (60)", "This role is obtained by reaching lvl 60 with mee6 this comes with access to the colored roles.")
             .addField("Executioner", "You need prestige 100 for this role good job you pro.")
             .addField("Skull Crushers", "You must have prestige 200 for this role. 0.0")
             .addField("Overlord", "Prestige 300 is needed for this role.")
@@ -150,9 +150,9 @@ bot.on('message', message=>{
             .setTitle("Changelog version " + version)
             .addFields(
                 { name: "-Canceled warn command maybe rework on it in the future.", value: '\u200B' },
-                { name: "-Updated -ranks command", value: '\u200B' },
-                { name: "-Updated -staffrules command", value: '\u200B' },
-                { name: "-Updated -warnrules command", value: '\u200B' },
+                { name: "-Updated -ranks command.", value: '\u200B' },
+                { name: "-Updated -staffrules command.", value: '\u200B' },
+                { name: "-Updated -warnrules command.", value: '\u200B' },
                 { name: "-Connected to one devices again.", value: '\u200B' },
                 { name: "-Reconnected the bot with a server to let it be online 24/7.", value: '\u200B' },
                 { name: "-Optimazing the -clear command.", value: '\u200B' },
@@ -215,7 +215,7 @@ bot.on('message', message=>{
              message.channel.send(Embed);
         break;
         case 'mute':
-            if(message.member.permissions.has('MANAGE_MESSAGE')){
+            if(message.member.permissions.has('MANAGE_MESSAGES')){
                 var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[1]));
                 if(!person) return  message.reply("I am unable to find this user " + person)
      
@@ -312,6 +312,6 @@ bot.on('message', message=>{
             }}
         break;
     }
-})
+});
 
 bot.login(process.env.token);
