@@ -168,8 +168,8 @@ bot.on('message', message=>{
             .setTitle("Changelog version " + version)
             .addFields(
                 { name: "-Updated some delays.", value: '\u200B' },
-                { name: "-Added valeu list command. (2 ARGS)", value: '\u200B' },
-                { name: "-Added valeulist command.", value: '\u200B' },
+                { name: "-Added value list command. (2 ARGS)", value: '\u200B' },
+                { name: "-Added valuelist command.", value: '\u200B' },
             )
             .setColor(0x17CFEC)
              message.channel.send(Embed);
