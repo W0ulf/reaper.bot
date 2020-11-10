@@ -27,8 +27,8 @@ bot.on('message', message=>{
                     setTimeout(() => {
                     usedCommandRecently.delete(message.author.id)
                 }, 20000);
-        break;
             }
+        break;
         case 'value':
             if (usedCommandRecently.has(message.author.id)) {
                 message.reply("You cannot use that command just yet! Wait another 20 secs!");
@@ -42,8 +42,8 @@ bot.on('message', message=>{
                     setTimeout(() => {
                     usedCommandRecently.delete(message.author.id)
                 }, 20000);
-        break;
             }
+        break;
         case 'poll':
             if(message.member.permissions.has('ADMINISTRATOR')){
                 const Embed = new Discord.MessageEmbed()
