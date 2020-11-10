@@ -24,7 +24,7 @@ bot.on('message', message=>{
             } else {
                 const Embed = new Discord.MessageEmbed()
             .setTitle("Valuelists")
-            .addField("'**Assassin valuelist:**", "http://bit.ly/AssassinValues")
+            .addField("**Assassin valuelist:**", "http://bit.ly/AssassinValues")
             .addField("**MM2 valuelist:**", "https://mm2values.com/v3/?p=home")
              .setColor(0xBA2308)
              message.channel.send(Embed);
@@ -38,7 +38,12 @@ bot.on('message', message=>{
                 if(args[1] === 'list'){
                     message.channel.send('**Assassin valuelist:** http://bit.ly/AssassinValues, **MM2 valuelist:** https://mm2values.com/v3/?p=home');
                 }else{
-                    message.channel.send('Invalid Args')
+                    const Embed = new Discord.MessageEmbed()
+            .setTitle("Valuelists")
+            .addField("**Assassin valuelist:**", "http://bit.ly/AssassinValues")
+            .addField("**MM2 valuelist:**", "https://mm2values.com/v3/?p=home")
+             .setColor(0xBA2308)
+             message.channel.send(Embed);
                 }
         break;
         case 'poll':
