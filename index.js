@@ -37,7 +37,7 @@ bot.on('message', message=>{
         case 'value':
             if (usedCommandRecently.has(message.author.id)) {
                 message.reply("You cannot use that command just yet! Wait another 20 secs!");
-            }else{
+            } else {
                 if(args[1] === 'list'){
                     const Embed = new Discord.MessageEmbed()
             .setTitle("**Valuelists**")
@@ -49,7 +49,7 @@ bot.on('message', message=>{
                     setTimeout(() => {
                     usedCommandRecently.delete(message.author.id)
                 }, 20000);
-                }else{
+                } else {
                     message.channel.send('**Invalid args!**');
                 }
             }
@@ -188,6 +188,7 @@ bot.on('message', message=>{
                 { name: "-Updated some delays.", value: '\u200B' },
                 { name: "-Added value list command. (2 ARGS)", value: '\u200B' },
                 { name: "-Added valuelist command.", value: '\u200B' },
+                { name: "-Updated -help command.", value: '\u200B' },
             )
             .setColor(0x17CFEC)
              message.channel.send(Embed);
@@ -241,6 +242,7 @@ bot.on('message', message=>{
             .addField("-changelog", "Shows what's changed in the last version from the bot.")
             .addField("-ranks", "Shows The Black Hand ranks embed.")
             .addField("-poll", "Makes from your question a poll.")
+            .addField("-valuelist", "Shows a couple roblox game valeu lists.")
              .setColor(0x6FC618)
              message.channel.send(Embed);
         break;
