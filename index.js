@@ -22,7 +22,12 @@ bot.on('message', message=>{
             if (usedCommandRecently.has(message.author.id)) {
                 message.reply("You cannot use that command just yet! Wait another 20 secs!");
             } else {
-                message.channel.send('**Assassin valuelist:** http://bit.ly/AssassinValues, **MM2 valuelist:** https://mm2values.com/v3/?p=home')
+                const Embed = new Discord.MessageEmbed()
+            .setTitle("Valuelists")
+            .addField("'**Assassin valuelist:**", "http://bit.ly/AssassinValues")
+            .addField("**MM2 valuelist:**", "https://mm2values.com/v3/?p=home")
+             .setColor(0xBA2308)
+             message.channel.send(Embed);
                 usedCommandRecently.add(message.author.id);
                     setTimeout(() => {
                     usedCommandRecently.delete(message.author.id)
