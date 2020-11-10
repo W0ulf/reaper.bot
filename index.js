@@ -4,7 +4,7 @@ const PREFIX = '-';
 const bot = new Discord.Client();
 const fs = require("fs");
 
-var version = '1.0.5'
+var version = '1.0.6'
 
 const usedCommandRecently = new Set();
 
@@ -167,15 +167,9 @@ bot.on('message', message=>{
                 const Embed = new Discord.MessageEmbed()
             .setTitle("Changelog version " + version)
             .addFields(
-                { name: "-Canceled warn command maybe rework on it in the future.", value: '\u200B' },
-                { name: "-Updated -ranks command.", value: '\u200B' },
-                { name: "-Updated -staffrules command.", value: '\u200B' },
-                { name: "-Updated -warnrules command.", value: '\u200B' },
-                { name: "-Connected to one devices again.", value: '\u200B' },
-                { name: "-Reconnected the bot with a server to let it be online 24/7.", value: '\u200B' },
-                { name: "-Optimazing the -clear command.", value: '\u200B' },
-                { name: "-Fixed the bot sending every message twice.", value: '\u200B' },
-                { name: "-Updated -help.", value: '\u200B' },
+                { name: "-Updated some delays.", value: '\u200B' },
+                { name: "-Added valeu list command. (2 ARGS)", value: '\u200B' },
+                { name: "-Added valeulist command.", value: '\u200B' },
             )
             .setColor(0x17CFEC)
              message.channel.send(Embed);
