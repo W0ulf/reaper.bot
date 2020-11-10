@@ -37,13 +37,13 @@ bot.on('message', message=>{
         case 'value':
                 if(args[1] === 'list'){
                     const Embed = new Discord.MessageEmbed()
-            .setTitle("Valuelists")
-            .addField("**Assassin valuelist:**", "http://bit.ly/AssassinValues")
-            .addField("**MM2 valuelist:**", "https://mm2values.com/v3/?p=home")
+            .setTitle("**Valuelists**")
+            .addField("Assassin valuelist:", "http://bit.ly/AssassinValues")
+            .addField("MM2 valuelist:", "https://mm2values.com/v3/?p=home")
              .setColor(0xBA2308)
              message.channel.send(Embed);
                 }else{
-                    message.channel.send('Invalid args!');
+                    message.channel.send('**Invalid args!**');
                 }
         break;
         case 'poll':
