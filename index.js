@@ -30,19 +30,11 @@ bot.on('message', message=>{
             }
         break;
         case 'value':
-            if (usedCommandRecently.has(message.author.id)) {
-                message.reply("You cannot use that command just yet! Wait another 20 secs!");
                 if(args[1] === 'list'){
                     message.channel.send('**Assassin valuelist:** http://bit.ly/AssassinValues, **MM2 valuelist:** https://mm2values.com/v3/?p=home');
                 }else{
                     message.channel.send('Invalid Args')
                 }
-            } else {
-                usedCommandRecently.add(message.author.id);
-                    setTimeout(() => {
-                    usedCommandRecently.delete(message.author.id)
-                }, 20000);
-            }
         break;
         case 'poll':
             if(message.member.permissions.has('ADMINISTRATOR')){
