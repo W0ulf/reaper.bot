@@ -35,6 +35,9 @@ bot.on('message', message=>{
             }
         break;
         case 'value':
+            if (usedCommandRecently.has(message.author.id)) {
+                message.reply("You cannot use that command just yet! Wait another 20 secs!");
+            }else{
                 if(args[1] === 'list'){
                     const Embed = new Discord.MessageEmbed()
             .setTitle("**Valuelists**")
@@ -42,9 +45,14 @@ bot.on('message', message=>{
             .addField("MM2 valuelist:", "https://mm2values.com/v3/?p=home")
              .setColor(0xBA2308)
              message.channel.send(Embed);
+             usedCommandRecently.add(message.author.id);
+                    setTimeout(() => {
+                    usedCommandRecently.delete(message.author.id)
+                }, 20000);
                 }else{
                     message.channel.send('**Invalid args!**');
                 }
+            }
         break;
         case 'poll':
             if(message.member.permissions.has('ADMINISTRATOR')){
