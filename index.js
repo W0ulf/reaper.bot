@@ -18,6 +18,22 @@ bot.on('message', message=>{
     let args = message.content.substring(PREFIX.length).split(" ");
 
     switch(args[0]){
+        case 'valuelists':
+            if (usedCommandRecently.has(message.author.id)) {
+                message.reply("You cannot use that command just yet! Wait another 20 secs!");
+            } else {
+                const Embed = new Discord.MessageEmbed()
+            .setTitle("**Valuelists**")
+            .addField("Assassin valuelist:", "http://bit.ly/AssassinValues")
+            .addField("MM2 valuelist:", "https://mm2values.com/v3/?p=home")
+             .setColor(0xBA2308)
+             message.channel.send(Embed);
+                usedCommandRecently.add(message.author.id);
+                    setTimeout(() => {
+                    usedCommandRecently.delete(message.author.id)
+                }, 20000);
+            }
+        break;
         case 'valuelist':
             if (usedCommandRecently.has(message.author.id)) {
                 message.reply("You cannot use that command just yet! Wait another 20 secs!");
@@ -188,6 +204,7 @@ bot.on('message', message=>{
                 { name: "-Updated some delays.", value: '\u200B' },
                 { name: "-Added value list command. (2 ARGS)", value: '\u200B' },
                 { name: "-Added valuelist command.", value: '\u200B' },
+                { name: "-Added valuelists command.", value: '\u200B' },
                 { name: "-Updated -help command.", value: '\u200B' },
             )
             .setColor(0x17CFEC)
