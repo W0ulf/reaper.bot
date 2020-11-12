@@ -83,7 +83,6 @@ bot.on('ready', () =>{
 
             if(!args[1]){
                 message.channel.send(Embed);
-                break;
             }
             message.channel.bulkDelete(1);
             let msgArgs = args.slice(1).join(" ");
