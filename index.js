@@ -3,7 +3,7 @@ const ms = require('ms');
 const PREFIX = '-';
 const bot = new Discord.Client();
 const fs = require("fs");
-const rollDice = () => Math.floor(Math.random() * 6) + 1;
+const Dice = () => Math.floor(Math.random() * 6) + 1;
 
 var version = '1.0.6'
 
@@ -20,7 +20,7 @@ bot.on('message', message=>{
 
     switch(args[0]){
         case 'rolldice':
-            message.reply('you rolled a ' + rollDice());
+            message.reply(' you rolled a ' + Dice());
         break;
         case 'valuelists':
             if (usedCommandRecently.has(message.author.id)) {
@@ -210,6 +210,7 @@ bot.on('message', message=>{
                 { name: "-Added valuelist command.", value: '\u200B' },
                 { name: "-Added valuelists command.", value: '\u200B' },
                 { name: "-Updated -help command.", value: '\u200B' },
+                { name: "-Added a -rolldice command.", value: '\u200B' },
             )
             .setColor(0x17CFEC)
              message.channel.send(Embed);
@@ -264,6 +265,7 @@ bot.on('message', message=>{
             .addField("-ranks", "Shows The Black Hand ranks embed.")
             .addField("-poll", "Makes from your question a poll.")
             .addField("-valuelist", "Shows a couple roblox game valeu lists.")
+            .addField("-rolldice", "Gives you a random numbre between 1 and 6.")
              .setColor(0x6FC618)
              message.channel.send(Embed);
         break;
