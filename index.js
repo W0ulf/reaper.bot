@@ -17,6 +17,7 @@ bot.on('ready', () =>{
 
     bot.on('message', message=>{
     let args = message.content.substring(PREFIX.length).split(" ");
+    if(args[0]){
         if (message.content === PREFIX + 'rolldice') {
             message.reply(' you rolled a ' + Dice());
         }
@@ -366,7 +367,7 @@ bot.on('ready', () =>{
                 }, 20000);
             }}
         }
-    });   
+    }});   
 
 
 bot.login(process.env.token);
