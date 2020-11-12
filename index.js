@@ -3,6 +3,7 @@ const ms = require('ms');
 const PREFIX = '-';
 const bot = new Discord.Client();
 const fs = require("fs");
+const rollDice = () => Math.floor(Math.random() * 6) + 1;
 
 var version = '1.0.6'
 
@@ -18,6 +19,9 @@ bot.on('message', message=>{
     let args = message.content.substring(PREFIX.length).split(" ");
 
     switch(args[0]){
+        case 'rolldice':
+            message.reply('you rolled a ' + rollDice());
+        break;
         case 'valuelists':
             if (usedCommandRecently.has(message.author.id)) {
                 message.reply("You cannot use that command just yet! Wait another 20 secs!");
