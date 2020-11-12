@@ -18,7 +18,7 @@ bot.on('ready', () =>{
     bot.on('message', async message=>{
     let args = message.content.substring(PREFIX.length).split(" ");
     switch(args[0]){
-        case '-rolldice':
+        case 'rolldice':
             message.reply(' you rolled a ' + Dice());
         break;
         case PREFIX + 'valuelists':
@@ -30,6 +30,8 @@ bot.on('ready', () =>{
             .addField("Assassin valuelist:", "http://bit.ly/AssassinValues")
             .addField("MM2 valuelist:", "https://mm2values.com/v3/?p=home, https://sites.google.com/view/valuelist")
             .addField("Counter blox demandlist:", "https://docs.google.com/document/d/12zxcA5V20GayIkSfZh4XmlECcOkcHUamXfrLbdMxnmw/edit")
+            .addField("BGS valuelist:", "https://docs.google.com/spreadsheets/d/1kFwDUAXFN6gpBPk1wdfv1YuDD-7Z0vRuijVJZE_bLaY/htmlview?pru=AAABcmgeoxk*MAjg05J9AA2G_oL3IvMuqg#gid=0")
+            .addField("Adopt me valuelist:", "https://www.adoptmevaluelist.com/")
              .setColor(0xBA2308)
              message.channel.send(Embed);
                 usedCommandRecently.add(message.author.id);
@@ -47,6 +49,8 @@ bot.on('ready', () =>{
             .addField("Assassin valuelist:", "http://bit.ly/AssassinValues")
             .addField("MM2 valuelist:", "https://mm2values.com/v3/?p=home, https://sites.google.com/view/valuelist")
             .addField("Counter blox demandlist:", "https://docs.google.com/document/d/12zxcA5V20GayIkSfZh4XmlECcOkcHUamXfrLbdMxnmw/edit")
+            .addField("BGS valuelist:", "https://docs.google.com/spreadsheets/d/1kFwDUAXFN6gpBPk1wdfv1YuDD-7Z0vRuijVJZE_bLaY/htmlview?pru=AAABcmgeoxk*MAjg05J9AA2G_oL3IvMuqg#gid=0")
+            .addField("Adopt me valuelist:", "https://www.adoptmevaluelist.com/")
              .setColor(0xBA2308)
              message.channel.send(Embed);
                 usedCommandRecently.add(message.author.id);
@@ -65,6 +69,8 @@ bot.on('ready', () =>{
             .addField("Assassin valuelist:", "http://bit.ly/AssassinValues")
             .addField("MM2 valuelist:", "https://mm2values.com/v3/?p=home, https://sites.google.com/view/valuelist")
             .addField("Counter blox demandlist:", "https://docs.google.com/document/d/12zxcA5V20GayIkSfZh4XmlECcOkcHUamXfrLbdMxnmw/edit")
+            .addField("BGS valuelist:", "https://docs.google.com/spreadsheets/d/1kFwDUAXFN6gpBPk1wdfv1YuDD-7Z0vRuijVJZE_bLaY/htmlview?pru=AAABcmgeoxk*MAjg05J9AA2G_oL3IvMuqg#gid=0")
+            .addField("Adopt me valuelist:", "https://www.adoptmevaluelist.com/")
              .setColor(0xBA2308)
              message.channel.send(Embed);
              usedCommandRecently.add(message.author.id);
@@ -81,7 +87,7 @@ bot.on('ready', () =>{
                 if(args[1]){
                 message.channel.bulkDelete(1);
                 let msgArgs = args.slice(1).join(" ");
-                message.channel.send("" + msgArgs + "").then(messageReaction => {
+                message.channel.send("**" + msgArgs + "**").then(messageReaction => {
                     messageReaction.react("👍");
                     messageReaction.react("👎");
                     message.catch(console.error);
