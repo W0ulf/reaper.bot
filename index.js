@@ -16,6 +16,7 @@ bot.on('ready', () =>{
 
 
     bot.on('message', message=>{
+    let args = message.content.substring(PREFIX.length).split(" ");
         if (message.content === PREFIX + 'rolldice') {
             message.reply(' you rolled a ' + Dice());
         }
@@ -304,7 +305,7 @@ bot.on('ready', () =>{
             if(message.member.permissions.has('MANAGE_MESSAGE')){
           if(!args[1]) return message.reply('Error, you did not put in an amount.')
           message.channel.bulkDelete(args[1]);
-            }else {
+            } else {
                 message.channel.send("You don\'t have permissions to use this command!")
             }
         }
@@ -336,7 +337,7 @@ bot.on('ready', () =>{
         if (message.content === PREFIX + 'ban') {
             if(usedCommandRecently.has(message.author.id)){
                 message.reply("You cannot use that command just yet! Wait another 20 secs!");
-            } else{
+            } else {
                 if(message.member.permissions.has('BAN_MEMBERS')) {
                     if(!args[1]) return message.reply('You need to specify a person!')
                     
@@ -357,7 +358,7 @@ bot.on('ready', () =>{
                     } else {
                         message.reply("That user isn\'t in the server!")
                     }
-                }else {
+                } else {
                     message.channel.send("You don\'t have permissions to use this command!")
                     usedCommandRecently.add(message.author.id);
                     setTimeout(() => {
