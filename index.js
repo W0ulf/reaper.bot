@@ -81,16 +81,17 @@ bot.on('ready', () =>{
                 .setColor(0xFFC300)
                 .setDescription("-poll to initiate a yes or no poll")
 
-            if(!args[1]){
-                message.channel.send(Embed);
-            }
-            message.channel.bulkDelete(1);
-            let msgArgs = args.slice(1).join(" ");
-            message.channel.send("**" + msgArgs + "**").then(messageReaction => {
-                messageReaction.react("👍");
-                messageReaction.react("👎");
-            });
-        }}
+                if(!args[1]){
+                    message.channel.send(Embed);
+                }
+                message.channel.bulkDelete(1);
+                let msgArgs = args.slice(1).join(" ");
+                message.channel.send("**" + msgArgs + "**").then(messageReaction => {
+                    messageReaction.react("👍");
+                    messageReaction.react("👎");
+                });
+            }   
+        }
         if (message.content === PREFIX + 'warnrules') {
             if(message.member.permissions.has('ADMINISTRATOR')){
                 message.channel.bulkDelete(1);
