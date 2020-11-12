@@ -76,13 +76,6 @@ bot.on('ready', () =>{
         }
         if (message.content === PREFIX + 'poll') {
             if(message.member.permissions.has('ADMINISTRATOR')){
-                if(!args[1]){
-                    const Embed = new Discord.MessageEmbed()
-                    .setTitle("Inititate Poll")
-                    .setColor(0xFFC300)
-                    .setDescription("-poll to initiate a yes or no poll")
-                    message.channel.send(Embed);
-                }
                 if(args[1]){
                 message.channel.bulkDelete(1);
                 let msgArgs = args.slice(1).join(" ");
@@ -91,6 +84,13 @@ bot.on('ready', () =>{
                     messageReaction.react("👎");
                     message.catch(console.error);
                 })};
+                if(!args[1]){
+                    const Embed = new Discord.MessageEmbed()
+                    .setTitle("Inititate Poll")
+                    .setColor(0xFFC300)
+                    .setDescription("-poll to initiate a yes or no poll")
+                    message.channel.send(Embed);
+                };
             }   
         }
         if (message.content === PREFIX + 'warnrules') {
