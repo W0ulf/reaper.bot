@@ -17,14 +17,11 @@ bot.on('ready', () =>{
 
     bot.on('message', async message=>{
     let args = message.content.substring(PREFIX.length).split(" ");
-    const messageArray = message.content.split(' ');
-    const cmd = messageArray[0];
-    const args = messageArray.slice(1);
-    if(args[0]){
-        if (message.content === PREFIX + 'rolldice') {
+    switch(args[0]){
+        case '-rolldice':
             message.reply(' you rolled a ' + Dice());
-        }
-        if (message.content === PREFIX + 'valuelists') {
+        break;
+        case PREFIX + 'valuelists':
             if (usedCommandRecently.has(message.author.id)) {
                 message.reply("You cannot use that command just yet! Wait another 20 secs!");
             } else {
@@ -40,8 +37,8 @@ bot.on('ready', () =>{
                     usedCommandRecently.delete(message.author.id)
                 }, 20000);
             }
-        }
-        if (message.content === PREFIX + 'valuelist') {
+        break;
+        case 'valuelist':
             if (usedCommandRecently.has(message.author.id)) {
                 message.reply("You cannot use that command just yet! Wait another 20 secs!");
             } else {
@@ -57,8 +54,8 @@ bot.on('ready', () =>{
                     usedCommandRecently.delete(message.author.id)
                 }, 20000);
             }
-        }
-        if (message.content === PREFIX + 'value') { 
+        break;
+        case 'value':
             if (usedCommandRecently.has(message.author.id)) {
                 message.reply("You cannot use that command just yet! Wait another 20 secs!");
             } else {
@@ -78,18 +75,27 @@ bot.on('ready', () =>{
                     message.channel.send('**Invalid args!**');
                 }
             }
-        }
-        if (message.content === PREFIX + 'poll') {
-            let pollchannel = message.mentions.channels.first();
-            let polldescription = args.slice(1).join(' ');
-            let embedpoll = new Discord.MessageEmbed()
-            .setTitle(polldescription)
-            .setColor(0xBA2308)
-            let MessageEmbed = await pollchannel.send(embedpoll);
-            await MessageEmbed.react('👍')
-            await MessageEmbed.react('👎')
-        }
-        if (message.content === PREFIX + 'warnrules') {
+        break;
+        case 'poll':
+            if(message.member.permissions.has('ADMINISTRATOR')){
+                if(args[1]){
+                message.channel.bulkDelete(1);
+                let msgArgs = args.slice(1).join(" ");
+                message.channel.send("" + msgArgs + "").then(messageReaction => {
+                    messageReaction.react("👍");
+                    messageReaction.react("👎");
+                    message.catch(console.error);
+                })};
+                if(!args[1]){
+                    const Embed = new Discord.MessageEmbed()
+                    .setTitle("Inititate Poll")
+                    .setColor(0xFFC300)
+                    .setDescription("-poll to initiate a yes or no poll")
+                    message.channel.send(Embed);
+                };
+            }
+        break;
+        case 'warnrules':
             if(message.member.permissions.has('ADMINISTRATOR')){
                 message.channel.bulkDelete(1);
                 const Embed = new Discord.MessageEmbed()
@@ -118,8 +124,8 @@ bot.on('ready', () =>{
             } else {
                 message.channel.send("You don\'t have permissions to use this command!")
             }
-        }
-        if (message.content === PREFIX + 'banrules') {
+        break;
+        case 'banrules':
             if(message.member.permissions.has('ADMINISTRATOR')){
                 message.channel.bulkDelete(1);
                 const Embed = new Discord.MessageEmbed()
@@ -137,8 +143,8 @@ bot.on('ready', () =>{
             }else {
                 message.channel.send("You don\'t have permissions to use this command!")
             }
-        }
-        if (message.content === PREFIX + 'ranks') {
+        break;
+        case 'ranks':
             if(message.member.permissions.has('ADMINISTRATOR')){
                  message.channel.bulkDelete(1);
                 const Embed = new Discord.MessageEmbed()
@@ -173,8 +179,8 @@ bot.on('ready', () =>{
             }else {
                 message.channel.send("You don\'t have permissions to use this command!")
             }
-        }
-        if (message.content === PREFIX + 'staffrules') {
+        break;
+        case 'staffrules':
             if(message.member.permissions.has('ADMINISTRATOR')){
                 message.channel.bulkDelete(1);
                 const Embed = new Discord.MessageEmbed()
@@ -194,8 +200,8 @@ bot.on('ready', () =>{
             } else {
                 message.channel.send("You don\'t have permissions to use this command!")
             }
-        }
-        if (message.content === PREFIX + 'changelog') {
+        break;
+        case 'changelog':
             if(message.member.permissions.has('SEND_MESSAGE')){
                 const Embed = new Discord.MessageEmbed()
             .setTitle("Changelog version " + version)
@@ -213,8 +219,8 @@ bot.on('ready', () =>{
                 message.channel.send("You don\'t have permissions to use this command!")
             }
 
-        }
-        if (message.content === PREFIX + 'invitelink') {
+        break;
+        case 'invitelink':
             if (usedCommandRecently.has(message.author.id)) {
                 message.reply("You cannot use that command just yet! Wait another 20 secs!");
             } else {
@@ -224,8 +230,8 @@ bot.on('ready', () =>{
                     usedCommandRecently.delete(message.author.id)
                 }, 20000);
             }
-        }
-        if (message.content === PREFIX + 'youtube') {
+        break;
+        case 'youtube':
             if (usedCommandRecently.has(message.author.id)) {
                 message.reply("You cannot use that command just yet! Wait another 20 secs!");
             } else {
@@ -235,15 +241,15 @@ bot.on('ready', () =>{
                     usedCommandRecently.delete(message.author.id)
                 }, 20000);
             }
-        }
-        if (message.content === PREFIX + 'info') {
+        break;
+        case 'info':
             if(args[1] === 'version'){
                 message.channel.send('Version' + version);
             }else{
                 message.channel.send('Invalid Args')
             }
-        }
-        if (message.content === PREFIX + 'help') {
+        break;
+        case 'help':
             const Embed = new Discord.MessageEmbed()
             .setTitle("List of all commands")
             .addField("-youtube", 'Gives meyers youtube link.')
@@ -263,8 +269,8 @@ bot.on('ready', () =>{
             .addField("-rolldice", "Gives you a random numbre between 1 and 6.")
              .setColor(0x6FC618)
              message.channel.send(Embed);
-        }
-        if (message.content === PREFIX + 'mute') {
+        break;
+        case 'mute':
             if(message.member.permissions.has('MANAGE_MESSAGES')){
                 var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[1]));
                 if(!person) return  message.reply("I am unable to find this user " + person)
@@ -295,16 +301,16 @@ bot.on('ready', () =>{
             }else {
                 message.channel.send("You don\'t have permissions to use this command!")
             }
-        }
-        if (message.content === PREFIX + 'clear') {
+        break;
+        case 'clear':
             if(message.member.permissions.has('MANAGE_MESSAGE')){
           if(!args[1]) return message.reply('Error, you did not put in an amount.')
           message.channel.bulkDelete(args[1]);
             } else {
                 message.channel.send("You don\'t have permissions to use this command!")
             }
-        }
-        if (message.content === PREFIX + 'kick') {
+        break;
+        case 'kick':
             if(message.member.permissions.has('KICK_MEMBERS')){
                 if(!args[1]) return message.reply('You need to specify a person!')
                 
@@ -328,8 +334,8 @@ bot.on('ready', () =>{
             }else {
                 message.channel.send("You don\'t have permissions to use this command!")
             }
-        }
-        if (message.content === PREFIX + 'ban') {
+        break;
+        case 'ban':
             if(usedCommandRecently.has(message.author.id)){
                 message.reply("You cannot use that command just yet! Wait another 20 secs!");
             } else {
@@ -360,7 +366,7 @@ bot.on('ready', () =>{
                     usedCommandRecently.delete(message.author.id)
                 }, 20000);
             }}
-        }
+        break;
     }});   
 
 
