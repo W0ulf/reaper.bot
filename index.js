@@ -17,6 +17,7 @@ bot.on('ready', () =>{
 
     bot.on('message', message=>{
     let args = message.content.substring(PREFIX.length).split(" ");
+    const args = message.content.split(' ');
     if(args[0]){
         if (message.content === PREFIX + 'rolldice') {
             message.reply(' you rolled a ' + Dice());
@@ -121,7 +122,7 @@ bot.on('ready', () =>{
              .setColor(0x17202A)
              .setThumbnail('https://cdn.discordapp.com/attachments/482542748210036738/742068412687187968/unknown.png');
              message.channel.send(Embed);
-            }else {
+            } else {
                 message.channel.send("You don\'t have permissions to use this command!")
             }
         }
@@ -197,7 +198,7 @@ bot.on('ready', () =>{
                 )
              .setColor(0x17CFEC)
              message.channel.send(Embed);
-            }else {
+            } else {
                 message.channel.send("You don\'t have permissions to use this command!")
             }
         }
