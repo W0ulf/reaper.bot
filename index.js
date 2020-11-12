@@ -29,7 +29,8 @@ bot.on('message', message=>{
                 const Embed = new Discord.MessageEmbed()
             .setTitle("**Valuelists**")
             .addField("Assassin valuelist:", "http://bit.ly/AssassinValues")
-            .addField("MM2 valuelist:", "https://mm2values.com/v3/?p=home")
+            .addField("MM2 valuelist:", "https://mm2values.com/v3/?p=home, https://sites.google.com/view/valuelist")
+            .addField("Counter blox demandlist:", "https://docs.google.com/document/d/12zxcA5V20GayIkSfZh4XmlECcOkcHUamXfrLbdMxnmw/edit")
              .setColor(0xBA2308)
              message.channel.send(Embed);
                 usedCommandRecently.add(message.author.id);
@@ -45,7 +46,8 @@ bot.on('message', message=>{
                 const Embed = new Discord.MessageEmbed()
             .setTitle("**Valuelists**")
             .addField("Assassin valuelist:", "http://bit.ly/AssassinValues")
-            .addField("MM2 valuelist:", "https://mm2values.com/v3/?p=home")
+            .addField("MM2 valuelist:", "https://mm2values.com/v3/?p=home, https://sites.google.com/view/valuelist")
+            .addField("Counter blox demandlist:", "https://docs.google.com/document/d/12zxcA5V20GayIkSfZh4XmlECcOkcHUamXfrLbdMxnmw/edit")
              .setColor(0xBA2308)
              message.channel.send(Embed);
                 usedCommandRecently.add(message.author.id);
@@ -63,6 +65,7 @@ bot.on('message', message=>{
             .setTitle("**Valuelists**")
             .addField("Assassin valuelist:", "http://bit.ly/AssassinValues")
             .addField("MM2 valuelist:", "https://mm2values.com/v3/?p=home, https://sites.google.com/view/valuelist")
+            .addField("Counter blox demandlist:", "https://docs.google.com/document/d/12zxcA5V20GayIkSfZh4XmlECcOkcHUamXfrLbdMxnmw/edit")
              .setColor(0xBA2308)
              message.channel.send(Embed);
              usedCommandRecently.add(message.author.id);
