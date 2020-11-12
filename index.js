@@ -15,9 +15,11 @@ bot.on('ready', () =>{
 });
 
 
-    bot.on('message', message=>{
+    bot.on('message', async message=>{
     let args = message.content.substring(PREFIX.length).split(" ");
-    const args = message.content.split(' ');
+    const messageArray = message.content.split(' ');
+    const cmd = messageArray[0];
+    const args = messageArray.slice(1);
     if(args[0]){
         if (message.content === PREFIX + 'rolldice') {
             message.reply(' you rolled a ' + Dice());
@@ -78,23 +80,14 @@ bot.on('ready', () =>{
             }
         }
         if (message.content === PREFIX + 'poll') {
-            if(message.member.permissions.has('ADMINISTRATOR')){
-                if(args[1]){
-                message.channel.bulkDelete(1);
-                let msgArgs = args.slice(1).join(" ");
-                message.channel.send("**" + msgArgs + "**").then(messageReaction => {
-                    messageReaction.react("👍");
-                    messageReaction.react("👎");
-                    message.catch(console.error);
-                })};
-                if(!args[1]){
-                    const Embed = new Discord.MessageEmbed()
-                    .setTitle("Inititate Poll")
-                    .setColor(0xFFC300)
-                    .setDescription("-poll to initiate a yes or no poll")
-                    message.channel.send(Embed);
-                };
-            }   
+            let pollchannel = message.mentions.channels.first();
+            let polldescription = args.slice(1).join(' ');
+            let embedpoll = new Discord.MessageEmbed()
+            .setTitle(polldescription)
+            .setColor(0xBA2308)
+            let MessageEmbed = await pollchannel.send(embedpoll);
+            await MessageEmbed.react('👍')
+            await MessageEmbed.react('👎')
         }
         if (message.content === PREFIX + 'warnrules') {
             if(message.member.permissions.has('ADMINISTRATOR')){
