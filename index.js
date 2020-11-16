@@ -18,6 +18,13 @@ bot.on('ready', () =>{
     bot.on('message', async message=>{
     let args = message.content.substring(PREFIX.length).split(" ");
     switch(args[0]){
+        case 'log':
+            if(message.member.permissions.has('ADMINISTRATOR')){
+                e.log(message.guild.roles);
+            } else {
+                message.channel.send("You don\'t have permissions to use this command!")
+            }
+        break;
         case 'rolldice':
             message.reply(' you rolled a ' + Dice());
         break;
