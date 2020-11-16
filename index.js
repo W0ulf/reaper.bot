@@ -21,6 +21,7 @@ bot.on('ready', () =>{
         case 'log':
             if(message.member.permissions.has('ADMINISTRATOR')){
                 console.log(message.guild.roles);
+                message.channel.bulkDelete
                 message.channel.send("Succesfully logged all rolls (dev only).")
             } else {
                 message.channel.send("You don\'t have permissions to use this command!")
