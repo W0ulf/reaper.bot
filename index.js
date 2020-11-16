@@ -28,8 +28,7 @@ bot.on('ready', () =>{
                
                     if(!role) return message.reply("Couldn't find the red role.")
      
-                    person.roles.add(role.id);
-     
+                    if(person.has(!role.id)) return person.roles.add(role.id);
                     message.channel.send(`@${person.user.tag} has now been giving the red role!`)
             }} else {
                 message.channel.send("You don\'t have permissions to use this command!")
