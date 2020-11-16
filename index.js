@@ -337,7 +337,7 @@ bot.on('ready', () =>{
      
                     person.roles.add(role.id);
                     message.channel.send(`@${person.user.tag} has now been giving the green role!`)
-                if(args[1] === 'red'){
+                } else { if(args[1] === 'red'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
                     if(!person) return  message.reply("I am unable to find this user " + person)
      
