@@ -327,6 +327,16 @@ bot.on('ready', () =>{
         break;
         case 'addrole':
             if(message.member.permissions.has('MANAGE_ROLES')){
+                if(args[1] === 'green'){
+                    var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
+                    if(!person) return  message.reply("I am unable to find this user " + person)
+     
+                    let role = message.guild.roles.cache.find(role => role.name === "green");
+               
+                    if(!role) return message.reply("Couldn't find the green role.")
+     
+                    person.roles.add(role.id);
+                    message.channel.send(`@${person.user.tag} has now been giving the green role!`)
                 if(args[1] === 'red'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
                     if(!person) return  message.reply("I am unable to find this user " + person)
@@ -337,7 +347,7 @@ bot.on('ready', () =>{
      
                     person.roles.add(role.id);
                     message.channel.send(`@${person.user.tag} has now been giving the red role!`)
-            }} else {
+            }}} else {
                 message.channel.send("You don\'t have permissions to use this command!")
             }
         break;
@@ -357,22 +367,7 @@ bot.on('ready', () =>{
                 message.channel.send("You don\'t have permissions to use this command!")
             }
         break;
-        case 'addrole':
-            if(message.member.permissions.has('MANAGE_ROLES')){
-                if(args[1] === 'green'){
-                    var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
-                    if(!person) return  message.reply("I am unable to find this user " + person)
-     
-                    let role = message.guild.roles.cache.find(role => role.name === "green");
-               
-                    if(!role) return message.reply("Couldn't find the green role.")
-     
-                    person.roles.add(role.id);
-                    message.channel.send(`@${person.user.tag} has now been giving the green role!`)
-            }} else {
-                message.channel.send("You don\'t have permissions to use this command!")
-            }
-        break;
+        
         case 'removerole':
             if(message.member.permissions.has('MANAGE_ROLES')){
                 if(args[1] === 'green'){
