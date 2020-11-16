@@ -327,18 +327,106 @@ bot.on('ready', () =>{
         break;
         case 'addrole':
             if(message.member.permissions.has('MANAGE_ROLES')){
-                if(args[1] === 'green'){
+                if(args[1] === 'nitro'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
                     if(!person) return  message.reply("I am unable to find this user " + person)
      
-                    let role = message.guild.roles.cache.find(role => role.name === "green");
+                    let role = message.guild.roles.cache.find(role => role.name === "Nitro Booster");
                
-                    if(!role) return message.reply("Couldn't find the green role.")
+                    if(!role) return message.reply("Couldn't find the NitroBooster role.")
      
                     person.roles.add(role.id);
-                    message.channel.send(`@${person.user.tag} has now been giving the green role!`)
+                    message.channel.send(`@${person.user.tag} has now been giving the NitroBooster role!`)
                 } else {
-                if(args[1] === 'Black'){
+                if(args[1] === 'pink'){
+                    var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
+                    if(!person) return  message.reply("I am unable to find this user " + person)
+     
+                    let role = message.guild.roles.cache.find(role => role.name === "Pink");
+               
+                    if(!role) return message.reply("Couldn't find the pink role.")
+     
+                    person.roles.add(role.id);
+                    message.channel.send(`@${person.user.tag} has now been giving the pink role!`)
+                } else {
+                if(args[1] === 'cyan'){
+                    var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
+                    if(!person) return  message.reply("I am unable to find this user " + person)
+     
+                    let role = message.guild.roles.cache.find(role => role.name === "Cyan");
+               
+                    if(!role) return message.reply("Couldn't find the cyan role.")
+     
+                    person.roles.add(role.id);
+                    message.channel.send(`@${person.user.tag} has now been giving the cyan role!`)
+                } else {
+                if(args[1] === 'yellow'){
+                    var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
+                    if(!person) return  message.reply("I am unable to find this user " + person)
+     
+                    let role = message.guild.roles.cache.find(role => role.name === "Yellow");
+               
+                    if(!role) return message.reply("Couldn't find the yellow role.")
+     
+                    person.roles.add(role.id);
+                    message.channel.send(`@${person.user.tag} has now been giving the yellow role!`)
+                } else {
+                if(args[1] === 'orange'){
+                    var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
+                    if(!person) return  message.reply("I am unable to find this user " + person)
+     
+                    let role = message.guild.roles.cache.find(role => role.name === "Orange");
+               
+                    if(!role) return message.reply("Couldn't find the orange role.")
+     
+                    person.roles.add(role.id);
+                    message.channel.send(`@${person.user.tag} has now been giving the orange role!`)
+                } else {
+                if(args[1] === 'purple'){
+                    var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
+                    if(!person) return  message.reply("I am unable to find this user " + person)
+     
+                    let role = message.guild.roles.cache.find(role => role.name === "Purple");
+               
+                    if(!role) return message.reply("Couldn't find the purple role.")
+     
+                    person.roles.add(role.id);
+                    message.channel.send(`@${person.user.tag} has now been giving the purple role!`)
+                } else {
+                if(args[1] === 'blurple'){
+                    var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
+                    if(!person) return  message.reply("I am unable to find this user " + person)
+     
+                    let role = message.guild.roles.cache.find(role => role.name === "Blurple");
+               
+                    if(!role) return message.reply("Couldn't find the blurple role.")
+     
+                    person.roles.add(role.id);
+                    message.channel.send(`@${person.user.tag} has now been giving the blurple role!`)
+                } else {
+                if(args[1] === 'blue'){
+                    var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
+                    if(!person) return  message.reply("I am unable to find this user " + person)
+     
+                    let role = message.guild.roles.cache.find(role => role.name === "Blue");
+               
+                    if(!role) return message.reply("Couldn't find the blue role.")
+     
+                    person.roles.add(role.id);
+                    message.channel.send(`@${person.user.tag} has now been giving the blue role!`)
+                } else {
+                if(args[1] === 'white'){
+                    var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
+                    if(!person) return  message.reply("I am unable to find this user " + person)
+     
+                    let role = message.guild.roles.cache.find(role => role.name === "White");
+               
+                    if(!role) return message.reply("Couldn't find the White role.")
+     
+                    person.roles.add(role.id);
+                    message.channel.send(`@${person.user.tag} has now been giving the White role!`)
+                } else {
+                if(args[1] === 'black'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
                     if(!person) return  message.reply("I am unable to find this user " + person)
      
@@ -349,7 +437,7 @@ bot.on('ready', () =>{
                     person.roles.add(role.id);
                     message.channel.send(`@${person.user.tag} has now been giving the Black role!`)
                 } else { 
-                if(args[1] === 'Muted'){
+                if(args[1] === 'muted'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
                     if(!person) return  message.reply("I am unable to find this user " + person)
      
@@ -360,7 +448,7 @@ bot.on('ready', () =>{
                     person.roles.add(role.id);
                     message.channel.send(`@${person.user.tag} has now been giving the Muted role!`)
                 } else { 
-                if(args[1] === 'Staff'){
+                if(args[1] === 'staff'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
                     if(!person) return  message.reply("I am unable to find this user " + person)
      
@@ -371,7 +459,7 @@ bot.on('ready', () =>{
                     person.roles.add(role.id);
                     message.channel.send(`@${person.user.tag} has now been giving the Staff role!`)
                 } else { 
-                if(args[1] === 'Silencer'){
+                if(args[1] === 'silencer'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
                     if(!person) return  message.reply("I am unable to find this user " + person)
      
@@ -382,7 +470,7 @@ bot.on('ready', () =>{
                     person.roles.add(role.id);
                     message.channel.send(`@${person.user.tag} has now been giving the Silencer role!`)
                 } else { 
-                if(args[1] === 'Trial'){
+                if(args[1] === 'trial'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
                     if(!person) return  message.reply("I am unable to find this user " + person)
      
@@ -393,7 +481,7 @@ bot.on('ready', () =>{
                     person.roles.add(role.id);
                     message.channel.send(`@${person.user.tag} has now been giving the Trial Mod role!`)
                 } else { 
-                if(args[1] === 'Bots'){
+                if(args[1] === 'bots'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
                     if(!person) return  message.reply("I am unable to find this user " + person)
      
@@ -408,7 +496,7 @@ bot.on('ready', () =>{
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
                     if(!person) return  message.reply("I am unable to find this user " + person)
      
-                    let role = message.guild.roles.cache.find(role => role.name === "green");
+                    let role = message.guild.roles.cache.find(role => role.name === "Green");
                
                     if(!role) return message.reply("Couldn't find the green role.")
      
@@ -419,13 +507,13 @@ bot.on('ready', () =>{
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
                     if(!person) return  message.reply("I am unable to find this user " + person)
      
-                    let role = message.guild.roles.cache.find(role => role.name === "red");
+                    let role = message.guild.roles.cache.find(role => role.name === "Red");
                
                     if(!role) return message.reply("Couldn't find the red role.")
      
                     person.roles.add(role.id);
                     message.channel.send(`@${person.user.tag} has now been giving the red role!`)
-            }}}}}}}}}} else {
+            }}}}}}}}}}}}}}}}}} else {
                 message.channel.send("You don\'t have permissions to use this command!")
             }
         break;
