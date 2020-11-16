@@ -331,7 +331,7 @@ bot.on('ready', () =>{
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
                     if(!person) return  message.reply("I am unable to find this user " + person)
      
-                    let role = message.guild.roles.cache.find(role => role.name === "Nitro_Booster");
+                    let role = message.guild.roles.cache.find(role => role.name === "Nitro Booster");
                
                     if(!role) return message.reply("Couldn't find the NitroBooster role.")
      
