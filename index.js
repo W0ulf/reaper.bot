@@ -18,8 +18,8 @@ bot.on('ready', () =>{
     bot.on('message', async message=>{
     let args = message.content.substring(PREFIX.length).split(" ");
     switch(args[0]){
-        case 'role':
-            if(message.member.permissions.has('MANAGE_MESSAGES')){
+        case 'addrole':
+            if(message.member.permissions.has('MANAGE_ROLES')){
                 if(args[1] === 'red'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
                     if(!person) return  message.reply("I am unable to find this user " + person)
@@ -28,7 +28,23 @@ bot.on('ready', () =>{
                
                     if(!role) return message.reply("Couldn't find the red role.")
      
-                    if(person.has(!role.id)) return person.roles.add(role.id);
+                    person.roles.add(role.id);
+                    message.channel.send(`@${person.user.tag} has now been giving the red role!`)
+            }} else {
+                message.channel.send("You don\'t have permissions to use this command!")
+            }
+        break;
+        case 'removerole':
+            if(message.member.permissions.has('MANAGE_ROLES')){
+                if(args[1] === 'red'){
+                    var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
+                    if(!person) return  message.reply("I am unable to find this user " + person)
+     
+                    let role = message.guild.roles.cache.find(role => role.name === "red");
+               
+                    if(!role) return message.reply("Couldn't find the red role.")
+     
+                    person.roles.remove(role.id);
                     message.channel.send(`@${person.user.tag} has now been giving the red role!`)
             }} else {
                 message.channel.send("You don\'t have permissions to use this command!")
