@@ -20,7 +20,7 @@ bot.on('ready', () =>{
     switch(args[0]){
         case 'log':
             if(message.member.permissions.has('ADMINISTRATOR')){
-                e.log(message.guild.roles);
+                log(message.guild.roles);
             } else {
                 message.channel.send("You don\'t have permissions to use this command!")
             }
