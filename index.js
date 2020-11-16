@@ -19,7 +19,7 @@ bot.on('ready', () =>{
     let args = message.content.substring(PREFIX.length).split(" ");
     switch(args[0]){
         case 'role':
-            if(message.member.permissions.has('MANAGE_ROLES')){
+            if(message.member.permissions.has('MANAGE_MESSAGES')){
                 if(args[2] === 'red'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[1]));
                     if(!person) return  message.reply("I am unable to find this user " + person)
@@ -31,12 +31,11 @@ bot.on('ready', () =>{
                     person.roles.add(role.id);
      
                     message.channel.send(`@${person.user.tag} has now been giving the red role!`)
-                } else {
-                    message.channel.send("Unable to find args 1!")
             }} else {
                 message.channel.send("You don\'t have permissions to use this command!")
             }
         break;
+        
         case 'log':
             if(message.member.permissions.has('ADMINISTRATOR')){
                 console.log(message.guild.roles);
