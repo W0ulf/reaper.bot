@@ -803,7 +803,7 @@ bot.on('ready', () =>{
                     if(!role) return message.reply("Couldn't find the middleman-trainee role.")
      
                     person.roles.remove(role.id);
-                    message.channel.send(`@${person.user.tag} has now been giving the Midlleman-Trainee role!`)
+                    message.channel.send(`@${person.user.tag} has now been removed from the Midlleman-Trainee role!`)
                 } else {
                 if(args[1] === 'middleman'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
@@ -814,7 +814,7 @@ bot.on('ready', () =>{
                     if(!role) return message.reply("Couldn't find the middleman role.")
      
                     person.roles.remove(role.id);
-                    message.channel.send(`@${person.user.tag} has now been giving the Middleman role!`)
+                    message.channel.send(`@${person.user.tag} has now been removed from the Middleman role!`)
                 } else {
                 if(args[1] === 'bot'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
@@ -825,7 +825,7 @@ bot.on('ready', () =>{
                     if(!role) return message.reply("Couldn't find the bot role.")
      
                     person.roles.remove(role.id);
-                    message.channel.send(`@${person.user.tag} has now been giving the Bot role!`)
+                    message.channel.send(`@${person.user.tag} has now been removed from the Bot role!`)
                 } else {
                 if(args[1] === 'merch'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
@@ -836,7 +836,7 @@ bot.on('ready', () =>{
                     if(!role) return message.reply("Couldn't find the merch role.")
      
                     person.roles.remove(role.id);
-                    message.channel.send(`@${person.user.tag} has now been giving the Merch_Notifications role!`)
+                    message.channel.send(`@${person.user.tag} has now been removed from the Merch_Notifications role!`)
                 } else {
                 if(args[1] === 'game'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
@@ -847,7 +847,7 @@ bot.on('ready', () =>{
                     if(!role) return message.reply("Couldn't find the game role.")
      
                     person.roles.remove(role.id);
-                    message.channel.send(`@${person.user.tag} has now been giving the Game_Nights role!`)
+                    message.channel.send(`@${person.user.tag} has now been removed from the Game_Nights role!`)
                 } else {
                 if(args[1] === 'i'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
@@ -858,7 +858,7 @@ bot.on('ready', () =>{
                     if(!role) return message.reply("Couldn't find the i role.")
      
                     person.roles.remove(role.id);
-                    message.channel.send(`@${person.user.tag} has now been giving the I_Want_Free_Stuff role!`)
+                    message.channel.send(`@${person.user.tag} has now been removed from the I_Want_Free_Stuff role!`)
                 } else {
                 if(args[1] === 'youtuber'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
@@ -869,7 +869,7 @@ bot.on('ready', () =>{
                     if(!role) return message.reply("Couldn't find the youtuber role.")
      
                     person.roles.remove(role.id);
-                    message.channel.send(`@${person.user.tag} has now been giving the Youtuber role!`)
+                    message.channel.send(`@${person.user.tag} has now been removed from the Youtuber role!`)
                 } else {
                 if(args[1] === 'giveaways'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
@@ -880,7 +880,7 @@ bot.on('ready', () =>{
                     if(!role) return message.reply("Couldn't find the giveaways role.")
      
                     person.roles.remove(role.id);
-                    message.channel.send(`@${person.user.tag} has now been giving the Giveaways role!`)
+                    message.channel.send(`@${person.user.tag} has now been removed from the Giveaways role!`)
                 } else {
                 if(args[1] === 'dj'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
@@ -891,7 +891,7 @@ bot.on('ready', () =>{
                     if(!role) return message.reply("Couldn't find the dj role.")
      
                     person.roles.remove(role.id);
-                    message.channel.send(`@${person.user.tag} has now been giving the DJ role!`)
+                    message.channel.send(`@${person.user.tag} has now been removed from the DJ role!`)
                 } else {
                 if(args[1] === 'main'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
@@ -902,7 +902,7 @@ bot.on('ready', () =>{
                     if(!role) return message.reply("Couldn't find the main role.")
      
                     person.roles.remove(role.id);
-                    message.channel.send(`@${person.user.tag} has now been giving the Main_Clan role!`)
+                    message.channel.send(`@${person.user.tag} has now been removed from the Main_Clan role!`)
                 } else {
                 if(args[1] === 'pit'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
@@ -913,7 +913,7 @@ bot.on('ready', () =>{
                     if(!role) return message.reply("Couldn't find the pit role.")
      
                     person.roles.remove(role.id);
-                    message.channel.send(`@${person.user.tag} has now been giving the Pit_Dog role!`)
+                    message.channel.send(`@${person.user.tag} has now been removed from the Pit_Dog role!`)
                 } else {
                 if(args[1] === 'executioner'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
@@ -924,7 +924,7 @@ bot.on('ready', () =>{
                     if(!role) return message.reply("Couldn't find the executioner role.")
      
                     person.roles.remove(role.id);
-                    message.channel.send(`@${person.user.tag} has now been giving the Executioner role!`)
+                    message.channel.send(`@${person.user.tag} has now been removed from the Executioner role!`)
                 } else {
                 if(args[1] === 'skull'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
@@ -935,7 +935,7 @@ bot.on('ready', () =>{
                     if(!role) return message.reply("Couldn't find the skull role.")
      
                     person.roles.remove(role.id);
-                    message.channel.send(`@${person.user.tag} has now been giving the Skull Crusher role!`)
+                    message.channel.send(`@${person.user.tag} has now been removed from the Skull Crusher role!`)
                 } else {
                 if(args[1] === 'overlord'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
@@ -946,7 +946,7 @@ bot.on('ready', () =>{
                     if(!role) return message.reply("Couldn't find the overlord role.")
      
                     person.roles.remove(role.id);
-                    message.channel.send(`@${person.user.tag} has now been giving the Overlord role!`)
+                    message.channel.send(`@${person.user.tag} has now been removed from the Overlord role!`)
                 } else {
                 if(args[1] === 'head'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
@@ -957,7 +957,7 @@ bot.on('ready', () =>{
                     if(!role) return message.reply("Couldn't find the head role.")
      
                     person.roles.remove(role.id);
-                    message.channel.send(`@${person.user.tag} has now been giving the Head Hunter role!`)
+                    message.channel.send(`@${person.user.tag} has now been removed from the Head Hunter role!`)
                 } else {
                 if(args[1] === 'blacklisted'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
@@ -968,7 +968,7 @@ bot.on('ready', () =>{
                     if(!role) return message.reply("Couldn't find the blacklisted role.")
      
                     person.roles.remove(role.id);
-                    message.channel.send(`@${person.user.tag} has now been giving the Blacklisted role!`)
+                    message.channel.send(`@${person.user.tag} has now been removed from the Blacklisted role!`)
                 } else {
                 if(args[1] === 'guardian'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
@@ -979,7 +979,7 @@ bot.on('ready', () =>{
                     if(!role) return message.reply("Couldn't find the guardian role.")
      
                     person.roles.removed(role.id);
-                    message.channel.send(`@${person.user.tag} has now been giving the Guardian role!`)
+                    message.channel.send(`@${person.user.tag} has now been removed from the Guardian role!`)
                 } else {
                 if(args[1] === 'og'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
@@ -990,7 +990,7 @@ bot.on('ready', () =>{
                     if(!role) return message.reply("Couldn't find the og role.")
      
                     person.roles.remove(role.id);
-                    message.channel.send(`@${person.user.tag} has now been giving the OG role!`)
+                    message.channel.send(`@${person.user.tag} has now been removed from the OG role!`)
                 } else {
                 if(args[1] === 'noobie'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
@@ -1001,7 +1001,7 @@ bot.on('ready', () =>{
                     if(!role) return message.reply("Couldn't find the noobie role.")
      
                     person.roles.remove(role.id);
-                    message.channel.send(`@${person.user.tag} has now been giving the Noobie (10) role!`)
+                    message.channel.send(`@${person.user.tag} has now been removed from the Noobie (10) role!`)
                 } else {
                 if(args[1] === 'cool'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
@@ -1012,7 +1012,7 @@ bot.on('ready', () =>{
                     if(!role) return message.reply("Couldn't find the cool role.")
      
                     person.roles.remove(role.id);
-                    message.channel.send(`@${person.user.tag} has now been giving the Cool Person (20) role!`)
+                    message.channel.send(`@${person.user.tag} has now been removed from the Cool Person (20) role!`)
                 } else {
                 if(args[1] === 'wispy'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
@@ -1023,7 +1023,7 @@ bot.on('ready', () =>{
                     if(!role) return message.reply("Couldn't find the wispy role.")
      
                     person.roles.remove(role.id);
-                    message.channel.send(`@${person.user.tag} has now been giving the Wispy role!`)
+                    message.channel.send(`@${person.user.tag} has now been removed from the Wispy role!`)
                 } else {
                 if(args[1] === 'midnight'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
@@ -1034,7 +1034,7 @@ bot.on('ready', () =>{
                     if(!role) return message.reply("Couldn't find the midnight role.")
      
                     person.roles.remove(role.id);
-                    message.channel.send(`@${person.user.tag} has now been giving the Midnight role!`)
+                    message.channel.send(`@${person.user.tag} has now been removed from the Midnight role!`)
                 } else {
                 if(args[1] === 'epic'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
@@ -1045,7 +1045,7 @@ bot.on('ready', () =>{
                     if(!role) return message.reply("Couldn't find the epic role.")
      
                     person.roles.remove(role.id);
-                    message.channel.send(`@${person.user.tag} has now been giving the Epic (40) role!`)
+                    message.channel.send(`@${person.user.tag} has now been removed from the Epic (40) role!`)
                 } else {
                 if(args[1] === 'legendary'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
@@ -1056,7 +1056,7 @@ bot.on('ready', () =>{
                     if(!role) return message.reply("Couldn't find the legendary role.")
      
                     person.roles.remove(role.id);
-                    message.channel.send(`@${person.user.tag} has now been giving the Legendary (40) role!`)
+                    message.channel.send(`@${person.user.tag} has now been removed from the Legendary (40) role!`)
                 } else {
                 if(args[1] === 'luxury'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
@@ -1067,7 +1067,7 @@ bot.on('ready', () =>{
                     if(!role) return message.reply("Couldn't find the luxury role.")
      
                     person.roles.remove(role.id);
-                    message.channel.send(`@${person.user.tag} has now been giving the Luxury role!`)
+                    message.channel.send(`@${person.user.tag} has now been removed from the Luxury role!`)
                 } else {
                 if(args[1] === 'merch_designers'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
@@ -1078,7 +1078,7 @@ bot.on('ready', () =>{
                     if(!role) return message.reply("Couldn't find the lerch_designers role.")
      
                     person.roles.remove('588215322272858144');
-                    message.channel.send(`@${person.user.tag} has now been giving the Merch_Designers role!`)
+                    message.channel.send(`@${person.user.tag} has now been removed from the Merch_Designers role!`)
                 } else {
                 if(args[1] === 'pink'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
@@ -1089,7 +1089,7 @@ bot.on('ready', () =>{
                     if(!role) return message.reply("Couldn't find the pink role.")
      
                     person.roles.remove(role.id);
-                    message.channel.send(`@${person.user.tag} has now been giving the pink role!`)
+                    message.channel.send(`@${person.user.tag} has now been removed from the pink role!`)
                 } else {
                 if(args[1] === 'cyan'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
@@ -1100,7 +1100,7 @@ bot.on('ready', () =>{
                     if(!role) return message.reply("Couldn't find the cyan role.")
      
                     person.roles.remove(role.id);
-                    message.channel.send(`@${person.user.tag} has now been giving the cyan role!`)
+                    message.channel.send(`@${person.user.tag} has now been removed from the cyan role!`)
                 } else {
                 if(args[1] === 'yellow'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
@@ -1111,7 +1111,7 @@ bot.on('ready', () =>{
                     if(!role) return message.reply("Couldn't find the yellow role.")
      
                     person.roles.remove(role.id);
-                    message.channel.send(`@${person.user.tag} has now been giving the yellow role!`)
+                    message.channel.send(`@${person.user.tag} has now been removed from the yellow role!`)
                 } else {
                 if(args[1] === 'orange'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
@@ -1122,7 +1122,7 @@ bot.on('ready', () =>{
                     if(!role) return message.reply("Couldn't find the orange role.")
      
                     person.roles.remove(role.id);
-                    message.channel.send(`@${person.user.tag} has now been giving the orange role!`)
+                    message.channel.send(`@${person.user.tag} has now been removed from the orange role!`)
                 } else {
                 if(args[1] === 'purple'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
@@ -1133,7 +1133,7 @@ bot.on('ready', () =>{
                     if(!role) return message.reply("Couldn't find the purple role.")
      
                     person.roles.remove(role.id);
-                    message.channel.send(`@${person.user.tag} has now been giving the purple role!`)
+                    message.channel.send(`@${person.user.tag} has now been removed from the purple role!`)
                 } else {
                 if(args[1] === 'blurple'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
@@ -1144,7 +1144,7 @@ bot.on('ready', () =>{
                     if(!role) return message.reply("Couldn't find the blurple role.")
      
                     person.roles.remove(role.id);
-                    message.channel.send(`@${person.user.tag} has now been giving the blurple role!`)
+                    message.channel.send(`@${person.user.tag} has now been removed from the blurple role!`)
                 } else {
                 if(args[1] === 'blue'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
@@ -1155,7 +1155,7 @@ bot.on('ready', () =>{
                     if(!role) return message.reply("Couldn't find the blue role.")
      
                     person.roles.remove(role.id);
-                    message.channel.send(`@${person.user.tag} has now been giving the blue role!`)
+                    message.channel.send(`@${person.user.tag} has now been removed from the blue role!`)
                 } else {
                 if(args[1] === 'white'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
@@ -1166,7 +1166,7 @@ bot.on('ready', () =>{
                     if(!role) return message.reply("Couldn't find the White role.")
      
                     person.roles.remove(role.id);
-                    message.channel.send(`@${person.user.tag} has now been giving the White role!`)
+                    message.channel.send(`@${person.user.tag} has now been removed from the White role!`)
                 } else {
                 if(args[1] === 'black'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
@@ -1177,7 +1177,7 @@ bot.on('ready', () =>{
                     if(!role) return message.reply("Couldn't find the Black role.")
      
                     person.roles.remove(role.id);
-                    message.channel.send(`@${person.user.tag} has now been giving the Black role!`)
+                    message.channel.send(`@${person.user.tag} has now been removed from the Black role!`)
                 } else { 
                 if(args[1] === 'muted'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
@@ -1188,7 +1188,7 @@ bot.on('ready', () =>{
                     if(!role) return message.reply("Couldn't find the Muted role.")
      
                     person.roles.remove(role.id);
-                    message.channel.send(`@${person.user.tag} has now been giving the Muted role!`)
+                    message.channel.send(`@${person.user.tag} has now been removed from the Muted role!`)
                 } else { 
                 if(args[1] === 'staff'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
@@ -1199,7 +1199,7 @@ bot.on('ready', () =>{
                     if(!role) return message.reply("Couldn't find the Staff role.")
      
                     person.roles.remove(role.id);
-                    message.channel.send(`@${person.user.tag} has now been giving the Staff role!`)
+                    message.channel.send(`@${person.user.tag} has now been removed from the Staff role!`)
                 } else { 
                 if(args[1] === 'silencer'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
@@ -1210,7 +1210,7 @@ bot.on('ready', () =>{
                     if(!role) return message.reply("Couldn't find the Silencer role.")
      
                     person.roles.remove(role.id);
-                    message.channel.send(`@${person.user.tag} has now been giving the Silencer role!`)
+                    message.channel.send(`@${person.user.tag} has now been removed from the Silencer role!`)
                 } else { 
                 if(args[1] === 'trial'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
@@ -1221,7 +1221,7 @@ bot.on('ready', () =>{
                     if(!role) return message.reply("Couldn't find the Trial Mod role.")
      
                     person.roles.remove(role.id);
-                    message.channel.send(`@${person.user.tag} has now been giving the Trial Mod role!`)
+                    message.channel.send(`@${person.user.tag} has now been removed from the Trial Mod role!`)
                 } else { 
                 if(args[1] === 'bots'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
@@ -1232,7 +1232,7 @@ bot.on('ready', () =>{
                     if(!role) return message.reply("Couldn't find the Bots role.")
      
                     person.roles.remove(role.id);
-                    message.channel.send(`@${person.user.tag} has now been giving the Bots role!`)
+                    message.channel.send(`@${person.user.tag} has now been removed from the Bots role!`)
                 } else { 
                 if(args[1] === 'green'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
@@ -1243,7 +1243,7 @@ bot.on('ready', () =>{
                     if(!role) return message.reply("Couldn't find the green role.")
      
                     person.roles.remove(role.id);
-                    message.channel.send(`@${person.user.tag} has now been giving the green role!`)
+                    message.channel.send(`@${person.user.tag} has now been removed from the green role!`)
                 } else { 
                 if(args[1] === 'red'){
                     var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
@@ -1254,7 +1254,7 @@ bot.on('ready', () =>{
                     if(!role) return message.reply("Couldn't find the red role.")
      
                     person.roles.remove(role.id);
-                    message.channel.send(`@${person.user.tag} has now been giving the red role!`)
+                    message.channel.send(`@${person.user.tag} has now been removed from the red role!`)
             }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}} else {
                 message.channel.send("You don\'t have permissions to use this command!")
             }
