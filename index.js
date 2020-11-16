@@ -335,7 +335,7 @@ bot.on('ready', () =>{
                
                     if(!role) return message.reply("Couldn't find the NitroBooster role.")
      
-                    person.roles.add(role.id);
+                    person.roles.add('588215322272858144');
                     message.channel.send(`@${person.user.tag} has now been giving the NitroBooster role!`)
                 } else {
                 if(args[1] === 'pink'){
