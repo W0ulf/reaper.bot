@@ -20,8 +20,8 @@ bot.on('ready', () =>{
     switch(args[0]){
         case 'role':
             if(message.member.permissions.has('MANAGE_ROLES')){
-                if(args[1] === 'red'){
-                    var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
+                if(args[2] === 'red'){
+                    var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[1]));
                     if(!person) return  message.reply("I am unable to find this user " + person)
      
                     let role = message.guild.roles.cache.find(role => role.name === "red");
