@@ -365,7 +365,7 @@ bot.on('ready', () =>{
      
                     let role = message.guild.roles.cache.find(role => role.name === "green");
                
-                    if(!role) return message.reply("Couldn't find the red role.")
+                    if(!role) return message.reply("Couldn't find the green role.")
      
                     person.roles.add(role.id);
                     message.channel.send(`@${person.user.tag} has now been giving the green role!`)
@@ -381,7 +381,7 @@ bot.on('ready', () =>{
      
                     let role = message.guild.roles.cache.find(role => role.name === "green");
                
-                    if(!role) return message.reply("Couldn't find the red role.")
+                    if(!role) return message.reply("Couldn't find the green role.")
      
                     person.roles.remove(role.id);
                     message.channel.send(`@${person.user.tag} has now been removed from the green role!`)
