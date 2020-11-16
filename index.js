@@ -35,7 +35,38 @@ bot.on('ready', () =>{
                 message.channel.send("You don\'t have permissions to use this command!")
             }
         break;
-        
+        case 'role':
+            if(message.member.permissions.has('MANAGE_MESSAGES')){
+                var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[1]));
+                if(!person) return  message.reply("I am unable to find this user " + person)
+     
+                let role = message.guild.roles.cache.find(role => role.name === "red");
+               
+     
+                if(!role) return message.reply("Couldn't find the mute role.")
+     
+     
+                let time = args[2];
+                if(!time){
+                    return message.reply("You didnt specify a time!");
+                }
+
+                person.roles.add(role.id);
+     
+     
+                message.channel.send(`@${person.user.tag} has now been muted for ${ms(ms(time))}`)
+     
+                setTimeout(function(){
+                    
+                    person.roles.remove(role.id);
+                    console.log(role.id)
+                    message.channel.send(`@${person.user.tag} has been unmuted.`)
+                }, ms(time));
+
+            }else {
+                message.channel.send("You don\'t have permissions to use this command!")
+            }
+        break;
         case 'log':
             if(message.member.permissions.has('ADMINISTRATOR')){
                 console.log(message.guild.roles);
