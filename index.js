@@ -5,7 +5,7 @@ const bot = new Discord.Client();
 const fs = require("fs");
 const Dice = () => Math.floor(Math.random() * 6) + 1;
 
-var version = '1.0.6'
+var version = '1.0.7'
 
 const usedCommandRecently = new Set();
 
@@ -221,12 +221,9 @@ bot.on('ready', () =>{
                 const Embed = new Discord.MessageEmbed()
             .setTitle("Changelog version " + version)
             .addFields(
-                { name: "-Updated some delays.", value: '\u200B' },
-                { name: "-Added value list command. (2 ARGS)", value: '\u200B' },
-                { name: "-Added valuelist command.", value: '\u200B' },
-                { name: "-Added valuelists command.", value: '\u200B' },
-                { name: "-Updated -help command.", value: '\u200B' },
-                { name: "-Added a -rolldice command.", value: '\u200B' },
+                { name: "-Added a -log command.", value: '\u200B' },
+                { name: "-Added a -addrole command.", value: '\u200B' },
+                { name: "-Added a -removerole command.", value: '\u200B' },
             )
             .setColor(0x17CFEC)
              message.channel.send(Embed);
@@ -282,6 +279,9 @@ bot.on('ready', () =>{
             .addField("-poll", "Makes from your question a poll.")
             .addField("-valuelist", "Shows a couple roblox game valeu lists.")
             .addField("-rolldice", "Gives you a random numbre between 1 and 6.")
+            .addField("-addrole {role} {user}", "Gives a specific role to a specific user.")
+            .addField("-removerole {role} {user}", "Removes a specific role to a specific user.")
+            .addField("-log", "Gives the role info for the server in the dev logs.")
              .setColor(0x6FC618)
              message.channel.send(Embed);
         break;
