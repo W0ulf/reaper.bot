@@ -28,7 +28,7 @@ bot.on('ready', () =>{
                
                     if(!role) return message.reply("Couldn't find the red role.")
      
-                    person.roles.add(role.id);
+                    person.roles.add('777971361607450645');
      
                     message.channel.send(`@${person.user.tag} has now been giving the red role!`)
                 } else {
