@@ -18,21 +18,6 @@ bot.on('ready', () =>{
     bot.on('message', async message=>{
     let args = message.content.substring(PREFIX.length).split(" ");
     switch(args[0]){
-        case 'role':
-            if(message.member.permissions.has('MANAGE_ROLES')){
-                    var person  = message.guild.member(message.mentions.users.first() || message.guild.members.cache.get(args[2]));
-                    if(!person) return  message.reply("I am unable to find this user " + person)
-     
-                    let role = message.guild.roles.cache.find(args[1]);
-               
-                    if(!role) return message.reply("Couldn't find this role.")
-     
-                    person.roles.add(role.id);
-                    message.channel.send(`@${person.user.tag} has now been giving the role!`)
-        } else {
-                message.channel.send("You don\'t have permissions to use this command!")
-            }
-        break;
         case 'log':
             if(message.member.permissions.has('ADMINISTRATOR')){
                 console.log(message.guild.roles);
