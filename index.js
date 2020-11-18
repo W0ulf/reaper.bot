@@ -19,7 +19,7 @@ bot.on('ready', () =>{
     let args = message.content.substring(PREFIX.length).split(" ");
     switch(args[0]){
         case 'pro':
-                const Embed = new Discord.MessageEmbed()
+            const Embed = new Discord.MessageEmbed()
             .setTitle("Yes yes, here is the proof Wout is pro. :)")
                 .addField("Geometry dash sub zero lvl 4", "https://www.youtube.com/watch?v=fNTNG3GsDEI&ab_channel=wout")
                 .addField("Geometry dash light lvl 6", "https://www.youtube.com/watch?v=4BTjxQ4wJ8c&ab_channel=wout")
@@ -39,7 +39,7 @@ bot.on('ready', () =>{
         case 'rolldice':
             message.reply(' you rolled a ' + Dice());
         break;
-        case PREFIX + 'valuelists':
+        case 'valuelists':
             if (usedCommandRecently.has(message.author.id)) {
                 message.reply("You cannot use that command just yet! Wait another 20 secs!");
             } else {
