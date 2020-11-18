@@ -18,6 +18,14 @@ bot.on('ready', () =>{
     bot.on('message', async message=>{
     let args = message.content.substring(PREFIX.length).split(" ");
     switch(args[0]){
+        case 'pro':
+                const Embed = new Discord.MessageEmbed()
+            .setTitle("Yes yes, here is the proof Wout is pro. :)")
+                .addField("Geometry dash sub zero lvl 4", "https://www.youtube.com/watch?v=fNTNG3GsDEI&ab_channel=wout")
+                .addField("Geometry dash light lvl 6", "https://www.youtube.com/watch?v=4BTjxQ4wJ8c&ab_channel=wout")
+             .setColor(0x17CFEC)
+             message.channel.send(Embed);
+        break;
         case 'log':
             if(message.member.permissions.has('ADMINISTRATOR')){
                 console.log(message.guild.roles);
@@ -224,6 +232,7 @@ bot.on('ready', () =>{
                 { name: "-Added a -log command.", value: '\u200B' },
                 { name: "-Added a -addrole command.", value: '\u200B' },
                 { name: "-Added a -removerole command.", value: '\u200B' },
+                { name: "-Added a -pro command.", value: '\u200B' },
             )
             .setColor(0x17CFEC)
              message.channel.send(Embed);
@@ -282,6 +291,7 @@ bot.on('ready', () =>{
             .addField("-addrole {role} {user}", "Gives a specific role to a specific user.")
             .addField("-removerole {role} {user}", "Removes a specific role to a specific user.")
             .addField("-log", "Gives the role info for the server in the dev logs.")
+            .addField("-pro", "Shows soem cool vids ;).")
              .setColor(0x6FC618)
              message.channel.send(Embed);
         break;
