@@ -18,15 +18,6 @@ bot.on('ready', () =>{
     bot.on('message', async message=>{
     let args = message.content.substring(PREFIX.length).split(" ");
     switch(args[0]){
-        case 'pro':
-            const Embed = new Discord.MessageEmbed()
-            .setTitle("Yes yes, here is the proof Wout is pro. :)")
-                .addField("Geometry dash sub zero lvl 4", "https://www.youtube.com/watch?v=fNTNG3GsDEI&ab_channel=wout")
-                .addField("Geometry dash light lvl 6", "https://www.youtube.com/watch?v=4BTjxQ4wJ8c&ab_channel=wout")
-                .addField("Geometry dash meltdown lvl 2", "https://www.youtube.com/watch?v=9F8oInoxUyE&ab_channel=wout")
-             .setColor(0x17CFEC)
-             message.channel.send(Embed);
-        break;
         case 'log':
             if(message.member.permissions.has('ADMINISTRATOR')){
                 console.log(message.guild.roles);
