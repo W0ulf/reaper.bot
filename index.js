@@ -21,7 +21,7 @@ bot.on('ready', () =>{
         case 'pro':
             const Embed2 = new Discord.MessageEmbed()
             .setTitle("Yes yes, here is the proof Wout is pro. :)")
-            .setThumbnail("file:///C:/Users/woutv/Desktop/unnamed.png")
+            .setThumbnail("https://media.discordapp.net/attachments/771002222636957720/779042965431648306/unnamed.png")
                 .addField("Geometry dash sub zero lvl 4", "https://www.youtube.com/watch?v=fNTNG3GsDEI&ab_channel=wout")
                 .addField("Geometry dash light lvl 6", "https://www.youtube.com/watch?v=4BTjxQ4wJ8c&ab_channel=wout")
                 .addField("Geometry dash meltdown lvl 2", "https://www.youtube.com/watch?v=9F8oInoxUyE&ab_channel=wout")
