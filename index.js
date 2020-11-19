@@ -293,7 +293,7 @@ bot.on('ready', () =>{
             .addField("-addrole {role} {user}", "Gives a specific role to a specific user.")
             .addField("-removerole {role} {user}", "Removes a specific role to a specific user.")
             .addField("-log", "Gives the role info for the server in the dev logs.")
-            .addField("-pro", "Shows soem cool vids ;).")
+            .addField("-pro", "Shows some cool vids ;).")
              .setColor(0x6FC618)
              message.channel.send(Embed11);
         break;
