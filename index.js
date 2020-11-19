@@ -110,7 +110,6 @@ bot.on('ready', () =>{
                 message.channel.send("**" + msgArgs + "**").then(messageReaction => {
                     messageReaction.react("👍");
                     messageReaction.react("👎");
-                    message.catch(console.error);
                 })};
                 if(!args[1]){
                     const Embed6 = new Discord.MessageEmbed()
