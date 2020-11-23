@@ -11,7 +11,7 @@ const usedCommandRecently = new Set();
 
 bot.on('ready', () =>{
     console.log('The bot is updated!');
-    bot.user.setActivity('Reaper.bot | -help');
+    bot.user.setActivity('Ethereal | -help');
 });
 
 
