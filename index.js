@@ -162,7 +162,7 @@ bot.on('ready', () =>{
                 { name: "-targeting someone for ethnicity or a condition.", value: '\u200B' },
                 { name: "-Pornography.", value: '\u200B' },
                 { name: "-Mass DM advertising with 'mass' being 3 or more people.", value: '\u200B' },
-                { name: "-If Meyer doesn't like you he will just ban you.", value: '\u200B' },
+                { name: "-If meyer doesn't like you he will just ban you.", value: '\u200B' },
                 )
              .setColor(0xBA2308)
              message.channel.send(Embed8);
@@ -173,7 +173,7 @@ bot.on('ready', () =>{
         case 'staffrules':
             if(message.member.permissions.has('ADMINISTRATOR')){
                 message.channel.bulkDelete(1);
-                const Embed8 = new Discord.MessageEmbed()
+                const Embed001 = new Discord.MessageEmbed()
             .setTitle("These are rules for the admins punishable by demote/kick")
             .addFields(
                 { name: "-Kicking/banning for no reason.", value: '\u200B' },
@@ -184,8 +184,8 @@ bot.on('ready', () =>{
                 { name: "-They can’t tag everyone (without permission).", value: '\u200B' },
                 { name: "-They can't delete/create channels (without permission).", value: '\u200B' },
                 )
-             .setColor(0xBA2308F)
-             message.channel.send(Embed8);
+             .setColor(0x17CFEC)
+             message.channel.send(Embed001);
             }else {
                 message.channel.send("You don\'t have permissions to use this command!")
             }
@@ -275,7 +275,7 @@ bot.on('ready', () =>{
         case 'help':
             const Embed11 = new Discord.MessageEmbed()
             .setTitle("List of all commands")
-            .addField("-youtube", 'Gives Meyers youtube link.')
+            .addField("-youtube", 'Gives meyers youtube link.')
             .addField("-clear", "Deletes a specific amount of messages.")
             .addField("-ban", "Ban a specific person from the discord server.")
             .addField("-kick", "Kick a specific person from the discord server.")
