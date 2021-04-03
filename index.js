@@ -173,7 +173,7 @@ bot.on('ready', () =>{
         case 'staffrules':
             if(message.member.permissions.has('ADMINISTRATOR')){
                 message.channel.bulkDelete(1);
-                const Embed001 = new Discord.MessageEmbed()
+                const Embed91 = new Discord.MessageEmbed()
             .setTitle("These are rules for the admins punishable by demote/kick")
             .addFields(
                 { name: "-Kicking/banning for no reason.", value: '\u200B' },
@@ -185,7 +185,7 @@ bot.on('ready', () =>{
                 { name: "-They can't delete/create channels (without permission).", value: '\u200B' },
                 )
              .setColor(0x17CFEC)
-             message.channel.send(Embed001);
+             message.channel.send(Embed91);
             }else {
                 message.channel.send("You don\'t have permissions to use this command!")
             }
