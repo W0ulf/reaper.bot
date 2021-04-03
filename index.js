@@ -141,6 +141,7 @@ bot.on('ready', () =>{
                 { name: "-You can only tag giveaway notifications if the value is over 10 exotics.", value: '\u200B' },
                 { name: "-Harassment of individuals is not tolerated nor condoned.", value: '\u200B' },
                 { name: "-Faking your clan application answers.", value: '\u200B' },
+                { name: "-Entering giveaways without meeting the giveaway requirement.", value: '\u200B' },
                 { name: "-The pls snipe command from Dank Memer is allowed in the general chat, although do not spam this command. When a staff member asks someone to stop and you continue action will be taken. Other Dank Memer commands are only allowed in #bot-usage.", value: '\u200B' },
                 )
              .setColor(0x17202A)
