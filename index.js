@@ -170,6 +170,26 @@ bot.on('ready', () =>{
                 message.channel.send("You don\'t have permissions to use this command!")
             }
         break;
+        case 'staffrules':
+            if(message.member.permissions.has('ADMINISTRATOR')){
+                message.channel.bulkDelete(1);
+                const Embed8 = new Discord.MessageEmbed()
+            .setTitle("These are rules for the admins punishable by demote/kick")
+            .addFields(
+                { name: "-Kicking/banning for no reason.", value: '\u200B' },
+                { name: "-Biased actions.", value: '\u200B' },
+                { name: "-Abusing power.", value: '\u200B' },
+                { name: "-They can't delete or send messages in #logs, they still can delete messages in other channels.", value: '\u200B' },
+                { name: "-They can't talk in #staff-announcements, they still can read unless they're The Hand.", value: '\u200B' },
+                { name: "-They can’t tag everyone (without permission).", value: '\u200B' },
+                { name: "-They can't delete/create channels (without permission).", value: '\u200B' },
+                )
+             .setColor(0x17CFEC)
+             message.channel.send(Embed8);
+            }else {
+                message.channel.send("You don\'t have permissions to use this command!")
+            }
+        break;
         case 'ranks':
             if(message.member.permissions.has('ADMINISTRATOR')){
                  message.channel.bulkDelete(1);
@@ -203,27 +223,6 @@ bot.on('ready', () =>{
              .setColor(0xBA2308)
              message.channel.send(Embed);
             }else {
-                message.channel.send("You don\'t have permissions to use this command!")
-            }
-        break;
-        case 'staffrules':
-            if(message.member.permissions.has('ADMINISTRATOR')){
-                message.channel.bulkDelete(1);
-                const Embed9 = new Discord.MessageEmbed()
-            .setTitle("These are rules for the admins punishable by demote/kick")
-            .addFields(
-                { name: "-Kicking/banning for no reason.", value: '\u200B' },
-                { name: "-Biased actions.", value: '\u200B' },
-                { name: "-Abusing power.", value: '\u200B' },
-                { name: "-They can't delete or send messages in #logs, they still can delete messages in other channels.", value: '\u200B' },
-                { name: "-They can't talk in #staff-announcements, they still can read unless they're The Hand.", value: '\u200B' },
-                { name: "-They can't delete/create channels (without permission).", value: '\u200B' },
-                { name: "-They can’t tag everyone (without permission).", value: '\u200B' },
-                { name: "-They have to send atleast 100 messages per week.", value: '\u200B' },
-                )
-             .setColor(0x17CFEC)
-             message.channel.send(Embed);
-            } else {
                 message.channel.send("You don\'t have permissions to use this command!")
             }
         break;
