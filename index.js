@@ -162,7 +162,7 @@ bot.on('ready', () =>{
                 { name: "-targeting someone for ethnicity or a condition.", value: '\u200B' },
                 { name: "-Pornography.", value: '\u200B' },
                 { name: "-Mass DM advertising with 'mass' being 3 or more people.", value: '\u200B' },
-                { name: "-If meyer doesn't like you he will just ban you.", value: '\u200B' },
+                { name: "-If Meyer doesn't like you he will just ban you.", value: '\u200B' },
                 )
              .setColor(0xBA2308)
              message.channel.send(Embed8);
@@ -275,7 +275,7 @@ bot.on('ready', () =>{
         case 'help':
             const Embed11 = new Discord.MessageEmbed()
             .setTitle("List of all commands")
-            .addField("-youtube", 'Gives meyers youtube link.')
+            .addField("-youtube", 'Gives Meyers youtube link.')
             .addField("-clear", "Deletes a specific amount of messages.")
             .addField("-ban", "Ban a specific person from the discord server.")
             .addField("-kick", "Kick a specific person from the discord server.")
