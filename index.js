@@ -220,6 +220,7 @@ bot.on('ready', () =>{
             .addField("Giveaways", "DM a staff member if you want this role, you must actively host giveaways in the giveaways channel.")
             .addField("DJ", "Staff chooses who gets this role and who does not.")
             .addField("Main_Clan", "This role is given to people that are in The Black Hand’s Assassin clan.")
+            .setColor(0xBA2308)
                 const Embed92 = new Discord.MessageEmbed()
             .addField("Clan MVP", "The person that gets the most clan points in the week gets this role.")
             .addField("Colored roles", "You can get a colored role if you boost this server.")
