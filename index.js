@@ -221,7 +221,7 @@ bot.on('ready', () =>{
             .addField("Speaker", "This role is for the co-owner.")
             .addField("Listener", "This role is for the owner.")
              .setColor(0xBA2308)
-             message.channel.send(Embed);
+             message.channel.send(Embed9);
             }else {
                 message.channel.send("You don\'t have permissions to use this command!")
             }
