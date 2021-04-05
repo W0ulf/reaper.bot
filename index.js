@@ -208,7 +208,7 @@ bot.on('ready', () =>{
             .addField("Satan (90)", "This role is obtained by reaching lvl 90 with MEE6.")
             .addField("God (100)", "This role is obtained by reaching lvl 100 with MEE6.")
             .addField("Executioner", "You need prestige 100 for this role good job you pro.")
-            .addField("Skull Crushers", "You must have prestige 200 for this role. 0.0")
+            .addField("Skull Crusher", "You must have prestige 200 for this role. 0.0")
             .addField("Overlord", "Prestige 300 is needed for this role.")
             .addField("Head Hunter", "Prestige 400!!?!")
             .addField("Guardian", "You must be prestige 500 for this role dam son.")
@@ -233,7 +233,7 @@ bot.on('ready', () =>{
             .addField("Clan CO", "This role is obtained for the ingame clan co owner.")
             .addField("Speaker", "This role is obtained by getting promoted from The Hand and is for the head admin.")
             .addField("Listener", "This role is for the co-owner.")
-            .addField("Eradictor", "This role is for the owner.")
+            .addField("Eradicator", "This role is for the owner.")
              .setColor(0xBA2308)
              message.channel.send(Embed9);
              message.channel.send(Embed92);
