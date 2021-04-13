@@ -171,15 +171,12 @@ bot.on('ready', () =>{
             }
         break;
         case 'emma':
-                const Embed99 = new Discord.MessageEmbed()
-            .setTitle("Gelukkige verjaardag emma!!!!")
-            .addFields(
-                embed.setTitle(`${memeTitle}`)
+            const Embed99 = new Discord.MessageEmbed()
+            .setTitle(`Gelukkige verjaardag emma!!!!`)
             .setURL(`https://media.discordapp.net/attachments/672958126911389696/831505171602866216/image0.png?width=263&height=468`)
             .setImage('https://media.discordapp.net/attachments/672958126911389696/831505171602866216/image0.png?width=263&height=468')
             .setColor('RANDOM')
             .setFooter(`voor de enige echte lesbische squancherent sletje`)
-                )
              message.channel.send(Embed99);
         break;
         case 'staffrules':
