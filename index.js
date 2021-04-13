@@ -136,7 +136,7 @@ bot.on('ready', () =>{
                 { name: "-Ghost tagging people is not allowed.", value: '\u200B' },
                 { name: "-Ear-rape in voice calls is not allowed, and you will be server muted.", value: '\u200B' },
                 { name: "-Loud songs/sounds are not to be played in voice calls.", value: '\u200B' },
-                { name: "-Tagging <@meyerwertsky#9050> or people with the 'God' role for harassment/no reason.", value: '\u200B' },
+                { name: "-Tagging <@meyerwertsky#9050> or people with the 'Eradictator' role for harassment/no reason.", value: '\u200B' },
                 { name: "-Use channels appropriately, stay on topic.", value: '\u200B' },
                 { name: "-You can only tag giveaway notifications if the value is over 10 exotics.", value: '\u200B' },
                 { name: "-Harassment of individuals is not tolerated nor condoned.", value: '\u200B' },
@@ -170,6 +170,18 @@ bot.on('ready', () =>{
                 message.channel.send("You don\'t have permissions to use this command!")
             }
         break;
+        case 'emma':
+                const Embed92 = new Discord.MessageEmbed()
+            .setTitle("Gelukkige verjaardag emma!!!!")
+            .addFields(
+                embed.setTitle(`${memeTitle}`)
+            .setURL(`https://media.discordapp.net/attachments/672958126911389696/831505171602866216/image0.png?width=263&height=468`)
+            .setImage('https://media.discordapp.net/attachments/672958126911389696/831505171602866216/image0.png?width=263&height=468')
+            .setColor('RANDOM')
+            .setFooter(`voor de enige echte lesbische squancherent sletje`)
+                )
+             message.channel.send(Embed92);
+        break;
         case 'staffrules':
             if(message.member.permissions.has('ADMINISTRATOR')){
                 message.channel.bulkDelete(1);
@@ -183,6 +195,7 @@ bot.on('ready', () =>{
                 { name: "-They can't talk in #staff-announcements, they still can read unless they're The Hand.", value: '\u200B' },
                 { name: "-They can’t tag everyone (without permission).", value: '\u200B' },
                 { name: "-They can't delete/create channels (without permission).", value: '\u200B' },
+                { name: "-They are not allowed to mess with bots without permission.", value: '\u200B' },
                 )
              .setColor(0x17CFEC)
              message.channel.send(Embed91);
