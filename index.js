@@ -171,7 +171,7 @@ bot.on('ready', () =>{
             }
         break;
         case 'emma':
-                const Embed92 = new Discord.MessageEmbed()
+                const Embed99 = new Discord.MessageEmbed()
             .setTitle("Gelukkige verjaardag emma!!!!")
             .addFields(
                 embed.setTitle(`${memeTitle}`)
@@ -180,7 +180,7 @@ bot.on('ready', () =>{
             .setColor('RANDOM')
             .setFooter(`voor de enige echte lesbische squancherent sletje`)
                 )
-             message.channel.send(Embed92);
+             message.channel.send(Embed99);
         break;
         case 'staffrules':
             if(message.member.permissions.has('ADMINISTRATOR')){
