@@ -172,7 +172,7 @@ bot.on('ready', () =>{
         break;
         case 'emma':
             const Embed99 = new Discord.MessageEmbed()
-            .setTitle(`Gelukkige verjaardag emma!!!!`)
+            .setTitle(`Gelukkige verjaardag Emma!!!!`)
             .setURL("https://cdn.discordapp.com/attachments/771002222636957720/832951017532162089/4b44d2086fae4bbaec1bc407cd59ebd031e82dff_2_690x334.jpg")
             .setImage("https://cdn.discordapp.com/attachments/771002222636957720/832951017532162089/4b44d2086fae4bbaec1bc407cd59ebd031e82dff_2_690x334.jpg")
             .setColor('RANDOM')
