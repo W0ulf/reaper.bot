@@ -173,10 +173,10 @@ bot.on('ready', () =>{
         case 'emma':
             const Embed99 = new Discord.MessageEmbed()
             .setTitle(`Gelukkige verjaardag emma!!!!`)
-            .setURL(`https://media.discordapp.net/attachments/672958126911389696/831505171602866216/image0.png?width=263&height=468`)
-            .setImage('https://media.discordapp.net/attachments/672958126911389696/831505171602866216/image0.png?width=263&height=468')
+            .setURL("https://cdn.discordapp.com/attachments/771002222636957720/832951017532162089/4b44d2086fae4bbaec1bc407cd59ebd031e82dff_2_690x334.jpg")
+            .setImage("https://cdn.discordapp.com/attachments/771002222636957720/832951017532162089/4b44d2086fae4bbaec1bc407cd59ebd031e82dff_2_690x334.jpg")
             .setColor('RANDOM')
-            .setFooter(`voor de enige echte lesbische squancherent sletje`)
+            .setFooter(`Gefelifiteerd met je 18de verjaardag!!! Je bent niet langer meer een kindje🎉 -Voor de enige echte sletje!`)
              message.channel.send(Embed99);
         break;
         case 'staffrules':
