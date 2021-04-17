@@ -175,7 +175,7 @@ bot.on('ready', () =>{
             .setTitle(`Gelukkige verjaardag Emma!!!!`)
             .setURL("https://cdn.discordapp.com/attachments/771002222636957720/832951017532162089/4b44d2086fae4bbaec1bc407cd59ebd031e82dff_2_690x334.jpg")
             .setImage("https://cdn.discordapp.com/attachments/771002222636957720/832951017532162089/4b44d2086fae4bbaec1bc407cd59ebd031e82dff_2_690x334.jpg")
-            .setColor('RANDOM')
+            .setColor(0xC41616)
             .setFooter(`Gefelifiteerd met je 18de verjaardag!!! Je bent niet langer meer een kindje🎉 -Voor het enige echte sletje!`)
              message.channel.send(Embed99);
         break;
