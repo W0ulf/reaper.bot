@@ -215,7 +215,7 @@ bot.on('ready', () =>{
             .addField("Legendary (60)", "This role is obtained by reaching lvl 60 with MEE6.")
             .addField("Nolife (70)", "This role is obtained by reaching lvl 70 with MEE6.")
             .addField("Goat (80)", "This role is obtained by reaching lvl 80 with MEE6.")
-            .addField("Satan (90)", "This role is obtained by reaching lvl 90 with MEE6.")
+            .addField("Angel (90)", "This role is obtained by reaching lvl 90 with MEE6.")
             .addField("God (100)", "This role is obtained by reaching lvl 100 with MEE6.")
             .addField("Executioner", "You need prestige 100 for this role good job you pro.")
             .addField("Skull Crusher", "You must have prestige 200 for this role. 0.0")
