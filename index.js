@@ -4,7 +4,7 @@ const PREFIX = '-';
 const bot = new Discord.Client();
 const fs = require("fs");
 const Dice = () => Math.floor(Math.random() * 6) + 1;
-const gay = () => Math.floor(Math.random() * 100) + 69;
+const gay = () => Math.floor(Math.random() * 100);
 
 var version = '1.0.7'
 
