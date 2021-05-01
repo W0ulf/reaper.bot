@@ -4,6 +4,7 @@ const PREFIX = '-';
 const bot = new Discord.Client();
 const fs = require("fs");
 const Dice = () => Math.floor(Math.random() * 6) + 1;
+const gay = () => Math.floor(Math.random() * 100) + 69;
 
 var version = '1.0.7'
 
@@ -37,6 +38,9 @@ bot.on('ready', () =>{
             } else {
                 message.channel.send("You don\'t have permissions to use this command!")
             }
+        break;
+        case 'gay':
+            message.reply(' You are ' + gay() + '% gay!');
         break;
         case 'rolldice':
             message.reply(' you rolled a ' + Dice());
@@ -226,7 +230,7 @@ bot.on('ready', () =>{
             .addField("Wispy", "This role is obtained by buying all the wisp merch.")
             .addField("Valentine", "This role is obtained by buying all the valentines merch.")
             .addField("Notification roles", "React with an emoji in #choose-your-role to get this type of roles.")
-            .addField("Youtuber", "For this role you must upload Assassin! content, have 200 subscribers and promote The Black Hand in your videos, a staff member will post your videos in #youtube-notifications. Only one of your vidoes can be posted per day.")
+            .addField("Youtuber", "For this role you must upload Assassin! content, have 1000 subscribers, 20k channel views and promote The Black Hand in your videos, a staff member will post your videos in #youtube-notifications. Only one of your vidoes can be posted per day.")
             .addField("Giveaways", "DM a staff member if you want this role, you must actively host giveaways in the giveaways channel.")
             .addField("DJ", "Staff chooses who gets this role and who does not.")
             .addField("Main_Clan", "This role is given to people that are in The Black Hand’s Assassin clan.")
