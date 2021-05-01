@@ -40,7 +40,7 @@ bot.on('ready', () =>{
             }
         break;
         case 'gay':
-            message.reply(' You are ' + gay() + '% gay!');
+            message.reply(' you are ' + gay() + '% gay!');
         break;
         case 'rolldice':
             message.reply(' you rolled a ' + Dice());
