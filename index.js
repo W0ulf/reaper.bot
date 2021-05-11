@@ -5,6 +5,7 @@ const bot = new Discord.Client();
 const fs = require("fs");
 const Dice = () => Math.floor(Math.random() * 6) + 1;
 const gay = () => Math.floor(Math.random() * 100);
+const got = require('got')
 
 var version = '1.0.7'
 
@@ -29,6 +30,25 @@ bot.on('ready', () =>{
                 .addField("Geometry dash meltdown lvl 3", "https://www.youtube.com/watch?v=hVRHqUvGZ8o&ab_channel=wout")
              .setColor(0x17CFEC)
              message.channel.send(Embed2);
+        break;
+        case 'meme':
+        if(message, args){
+        const embedmeme = new Discord.MessageEmbed
+        got('https://www.reddit.com/r/memes/random/.json').then(response => {
+            let content = JSON.parse(response.body);
+            let permalink = content[0].data.children[0].data.permalink;
+            let memeUrl = `https://reddit.com${permalink}`;
+            let memeImage = content[0].data.children[0].data.url;
+            let memeTitle = content[0].data.children[0].data.title;
+            let memeUpvotes = content[0].data.children[0].data.ups;
+            let memeNumComments = content[0].data.children[0].data.num_comments;
+            embed.setTitle(`${memeTitle}`)
+            embed.setURL(`${memeUrl}`)
+            embed.setImage(memeImage)
+            embed.setColor('RAMDOM')
+            embed.setFooter(`👍 ${memeUpvotes} | 💬 ${memeNumComments}`)
+            message.channel.send(embedmeme);
+        })}
         break;
         case 'log':
             if(message.member.permissions.has('ADMINISTRATOR')){
