@@ -33,9 +33,9 @@ bot.on('ready', () =>{
             if(args[1] === 'fullz'){
                 const Embedfullz = new Discord.MessageEmbed()
             .setTitle("PHAHAHHAA")
-            .setimage("https://media.discordapp.net/attachments/819623586419572746/841718642810159124/qsd.png")
-             .setColor('RANDOM')
-             message.channel.send(Embedfullz);
+            Embedfullz.setImage("https://media.discordapp.net/attachments/819623586419572746/841718642810159124/qsd.png")
+            .setColor('RANDOM')
+                message.channel.send(Embedfullz);
             }else{
                 message.reply(' you are ' + gay() + '% gay!');
             }
