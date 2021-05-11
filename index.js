@@ -343,6 +343,7 @@ bot.on('ready', () =>{
             .addField("-removerole {role} {user}", "Removes a specific role to a specific user.")
             .addField("-log", "Gives the role info for the server in the dev logs.")
             .addField("-pro", "Shows some cool vids ;).")
+            .addField("-meme", "Shows a top meme from the day!.")
              .setColor(0x6FC618)
              message.channel.send(Embed11);
         break;
@@ -381,7 +382,7 @@ bot.on('ready', () =>{
         case 'clear':
             if(message.member.permissions.has('MANAGE_MESSAGE')){
           if(!args[1]) return message.reply('Error, you did not put in an amount.')
-          message.channel.bulkDelete(args[1]);
+          message.channel.bulkDelete(args[1]+1);
             } else {
                 message.channel.send("You don\'t have permissions to use this command!")
             }
