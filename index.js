@@ -34,6 +34,8 @@ bot.on('ready', () =>{
         case 'gay':
             if(args[1] === 'fullz'){
                 message.channel.send("PHAHAHAA https://media.discordapp.net/attachments/819623586419572746/841718642810159124/qsd.png");
+            }else{
+                message.reply(' you are ' + gay() + '% gay!');
             }
         break;
         case 'meme':
@@ -63,9 +65,6 @@ bot.on('ready', () =>{
             } else {
                 message.channel.send("You don\'t have permissions to use this command!")
             }
-        break;
-        case 'gay':
-            message.reply(' you are ' + gay() + '% gay!');
         break;
         case 'rolldice':
             message.reply(' you rolled a ' + Dice());
