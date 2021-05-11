@@ -32,8 +32,8 @@ bot.on('ready', () =>{
              message.channel.send(Embed2);
         break;
         case 'meme':
-        if(message, args){
-        const embedmeme = new Discord.MessageEmbed
+            if(message, args){
+        const embedmeme = new Discord.MessageEmbed()
         got('https://www.reddit.com/r/memes/random/.json').then(response => {
             let content = JSON.parse(response.body);
             let permalink = content[0].data.children[0].data.permalink;
