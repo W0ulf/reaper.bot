@@ -42,11 +42,11 @@ bot.on('ready', () =>{
             let memeTitle = content[0].data.children[0].data.title;
             let memeUpvotes = content[0].data.children[0].data.ups;
             let memeNumComments = content[0].data.children[0].data.num_comments;
-            embed.setTitle(`${memeTitle}`)
-            embed.setURL(`${memeUrl}`)
-            embed.setImage(memeImage)
-            embed.setColor('RAMDOM')
-            embed.setFooter(`👍 ${memeUpvotes} | 💬 ${memeNumComments}`)
+            embedmeme.setTitle(`${memeTitle}`)
+            embedmeme.setURL(`${memeUrl}`)
+            embedmeme.setImage(memeImage)
+            embedmeme.setColor('RAMDOM')
+            embedmeme.setFooter(`👍 ${memeUpvotes} | 💬 ${memeNumComments}`)
             message.channel.send(embedmeme);
         })}
         break;
