@@ -7,7 +7,7 @@ const Dice = () => Math.floor(Math.random() * 6) + 1;
 const gay = () => Math.floor(Math.random() * 100);
 const got = require('got')
 
-var version = '1.0.7'
+var version = '1.0.8 [ALPHA]'
 
 const usedCommandRecently = new Set();
 
@@ -280,10 +280,11 @@ bot.on('ready', () =>{
                 const Embed10 = new Discord.MessageEmbed()
             .setTitle("Changelog version " + version)
             .addFields(
-                { name: "-Added a -log command.", value: '\u200B' },
-                { name: "-Added a -addrole command.", value: '\u200B' },
-                { name: "-Added a -removerole command.", value: '\u200B' },
-                { name: "-Added a -pro command.", value: '\u200B' },
+                { name: "-Added a -meme command.", value: '\u200B' },
+                { name: "-Added a -emma command.", value: '\u200B' },
+                { name: "-Added a -fixed some bugs command.", value: '\u200B' },
+                { name: "-Added a -put the bot online again.", value: '\u200B' },
+                { name: "-Working on some new features.", value: '\u200B' },
             )
             .setColor(0x17CFEC)
              message.channel.send(Embed10);
@@ -382,7 +383,7 @@ bot.on('ready', () =>{
         case 'clear':
             if(message.member.permissions.has('MANAGE_MESSAGE')){
           if(!args[1]) return message.reply('Error, you did not put in an amount.')
-          message.channel.bulkDelete(args[1]+1);
+          message.channel.bulkDelete(args[1]) + 1;
             } else {
                 message.channel.send("You don\'t have permissions to use this command!")
             }
