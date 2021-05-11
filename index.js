@@ -15,8 +15,6 @@ bot.on('ready', () =>{
     console.log('The bot is updated!');
     bot.user.setActivity('Ethereal | -help');
 });
-
-
     bot.on('message', async message=>{
     let args = message.content.substring(PREFIX.length).split(" ");
     switch(args[0]){
@@ -33,7 +31,11 @@ bot.on('ready', () =>{
         break;
         case 'gay':
             if(args[1] === 'fullz'){
-                message.channel.send("PHAHAHAA https://media.discordapp.net/attachments/819623586419572746/841718642810159124/qsd.png");
+                const Embedfullz = new Discord.MessageEmbed()
+            .setTitle("PHAHAHHAA")
+            .setimage("https://media.discordapp.net/attachments/819623586419572746/841718642810159124/qsd.png")
+             .setColor('RANDOM')
+             message.channel.send(Embedfullz);
             }else{
                 message.reply(' you are ' + gay() + '% gay!');
             }
@@ -289,6 +291,8 @@ bot.on('ready', () =>{
                 { name: "-Added a -fixed some bugs command.", value: '\u200B' },
                 { name: "-Added a -put the bot online again.", value: '\u200B' },
                 { name: "-Working on some new features.", value: '\u200B' },
+                { name: "-Added a -gay fullz command.", value: '\u200B' },
+                { name: "-Merged -gay and -gay fullz into one command.", value: '\u200B' },
             )
             .setColor(0x17CFEC)
              message.channel.send(Embed10);
