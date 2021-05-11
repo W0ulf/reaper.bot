@@ -31,6 +31,11 @@ bot.on('ready', () =>{
              .setColor(0x17CFEC)
              message.channel.send(Embed2);
         break;
+        case 'gay':
+            if(args[1] === 'fullz'){
+                message.channel.send("PHAHAHAA https://media.discordapp.net/attachments/819623586419572746/841718642810159124/qsd.png");
+            }
+        break;
         case 'meme':
             if(message, args){
         const embedmeme = new Discord.MessageEmbed()
