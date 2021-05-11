@@ -288,7 +288,7 @@ bot.on('ready', () =>{
             .addFields(
                 { name: "-Added a -meme command.", value: '\u200B' },
                 { name: "-Added a -emma command.", value: '\u200B' },
-                { name: "-Added a -fixed some bugs command.", value: '\u200B' },
+                { name: "-fixed some bugs command.", value: '\u200B' },
                 { name: "-Added a -put the bot online again.", value: '\u200B' },
                 { name: "-Working on some new features.", value: '\u200B' },
                 { name: "-Added a -gay fullz command.", value: '\u200B' },
